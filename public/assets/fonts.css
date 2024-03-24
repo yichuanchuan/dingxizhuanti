@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'ruizi';
+  src: url('../fonts/ruizi.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'alibaba';
+  src: url('../fonts/alibaba.otf') format('truetype');
+}
+@font-face {
+  font-family: 'yaoshe';
+  src: url('../fonts/yaoshe.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'siyuan';
+  src: url('../fonts/siyuan.otf') format('truetype');
+}
