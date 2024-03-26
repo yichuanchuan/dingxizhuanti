@@ -15,6 +15,8 @@ import aWall from '../views/aWall/aWall.vue';
 import weather from '../views/weather/weather.vue';
 import weatherForecast from '../views/weatherForecast/weatherForecast.vue';
 import introduction from '../views/introduction/introduction.vue';
+import scene from '../views/scene/scene.vue';
+import patent from '../views/patent/patent.vue';
 Vue.use(VueRouter);
 
 const routes = [
@@ -25,6 +27,8 @@ const routes = [
   { path: '/weather', meta: { name: '天气' }, component: weather },
   { path: '/weatherForecast', meta: { name: '天气预报' }, component: weatherForecast },
   { path: '/introduction', meta: { name: '简介' }, component: introduction },
+  { path: '/scene', meta: { name: '四大场景' }, component: scene },
+  { path: '/patent', meta: { name: '专利成果' }, component: patent },
 ];
 
 const router = new VueRouter({

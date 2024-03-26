@@ -34,6 +34,7 @@ export default {
         fontFamily: this.options.fontFamily,
         letterSpacing: this.options.letterSpacing + 'px' ? this.options.letterSpacing + 'px' : '0',
         textShadow: this.options.textShadow ? this.options.textShadow : '',
+        lineHeight: this.options.lineHeight ? this.options.lineHeight + 'px' : '',
       };
     },
   },
