@@ -904,10 +904,10 @@ export default {
       top: 400px;
       left: 1276px;
       background: url('./images/img.png');
-      // transition: transform 0.3s; /* 添加过渡效果 */
-      // &:hover {
-      //   transform: scale(1.1); /* 在悬停时放大 1.1 倍 */
-      // }
+      transition: transform 0.3s; /* 添加过渡效果 */
+      &:hover {
+        transform: scale(1.04); /* 在悬停时放大 1.04 倍 */
+      }
     }
     .prediction {
       position: absolute;
