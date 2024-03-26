@@ -14,6 +14,7 @@ import footstone from '../views/footstone/footstone.vue';
 import aWall from '../views/aWall/aWall.vue';
 import weather from '../views/weather/weather.vue';
 import weatherForecast from '../views/weatherForecast/weatherForecast.vue';
+import introduction from '../views/introduction/introduction.vue';
 Vue.use(VueRouter);
 
 const routes = [
@@ -23,6 +24,7 @@ const routes = [
   { path: '/aWall', meta: { name: '一面墙' }, component: aWall },
   { path: '/weather', meta: { name: '天气' }, component: weather },
   { path: '/weatherForecast', meta: { name: '天气预报' }, component: weatherForecast },
+  { path: '/introduction', meta: { name: '简介' }, component: introduction },
 ];
 
 const router = new VueRouter({

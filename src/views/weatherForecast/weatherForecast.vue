@@ -15,6 +15,14 @@
         <commonCharts :option="chartOption1" :chartIndex="1" :cssStyle="chartCssStyle1"></commonCharts>
         <!-- 短期准确率echarts -->
         <commonCharts :option="chartOption2" :chartIndex="2" :cssStyle="chartCssStyle2"></commonCharts>
+        <!-- 温度与湿度左echarts -->
+        <commonCharts :option="chartOption3" :chartIndex="3" :cssStyle="chartCssStyle3"></commonCharts>
+        <!-- 温度与湿度左背景 -->
+        <div class="left_image"></div>
+        <!-- 温度与湿度右echarts -->
+        <commonCharts :option="chartOption4" :chartIndex="4" :cssStyle="chartCssStyle4"></commonCharts>
+        <!-- 温度与湿度右背景 -->
+        <div class="right_image"></div>
       </div>
     </div>
   </div>
@@ -474,6 +482,26 @@ export default {
           left: 2460,
           top: 1957,
         },
+        {
+          text: '温度 (°C)',
+          fontSize: 22,
+          fontFamily: 'PingFangSC, PingFang SC',
+          textAlign: 'left',
+          color: '#BCE3FF',
+          width: 90,
+          left: 305,
+          top: 1280,
+        },
+        {
+          text: '湿度 (%)',
+          fontSize: 22,
+          fontFamily: 'SourceHanSansCN, SourceHanSansCN',
+          textAlign: 'left',
+          color: '#BCE3FF',
+          width: 90,
+          left: 767,
+          top: 1280,
+        },
       ],
       imageList: [0, 1, 2, 3, 4, 5, 6, 7, 8],
       chartCssStyle: {
@@ -524,12 +552,6 @@ export default {
           type: 'category',
           data: ['定西市','安定区','临洮县','陇西县','通渭县','渭源县','漳县','岷县'],
           offset: 8,
-          axisLine: {
-            lineStyle: {
-              color: '#889BAB'
-
-            }
-          },
           axisTick: {
               show: false,
           },
@@ -1002,6 +1024,203 @@ export default {
           }
         ],
       },
+      chartCssStyle3: {
+        width: 400,
+        height: 350,
+        top: 966,
+        left: 149,
+      },
+      chartOption3: {
+        backgroundColor:"transparent",
+        series: [{
+          name: "刻度文字",
+          type: "gauge",
+          radius: "80%",
+          center: ["50%", "55%"],
+          startAngle: 235,
+          endAngle: -55,
+          splitNumber: 10,
+          min: -50,
+          max: 100,
+          axisTick: {
+              show: false
+          },
+          axisLine: {
+            lineStyle: {
+              color: [[0.36, "#FDB302"], [1, "#1E1E1E"]],
+              width: 25,
+              opacity: 0.9
+            }
+          },
+          splitLine: {
+            show: false
+          },
+          axisLabel: {
+            show: true,
+            distance: -70,
+            fontSize: 22,
+            color: '#9F9584',
+          },
+          detail: {
+            show: false
+          },
+          pointer: {
+              show: true,
+              showAbove: false,
+              width: 8,
+              length: "70%",
+              itemStyle: {
+                color: new echarts.graphic.LinearGradient(
+                  0, 0, 0, 1, [{
+                      offset: 0,
+                      color: '#E2CE67',
+                    },
+                    {
+                      offset: 1,
+                      color: '#D9A157',
+                    }
+                  ]
+                )
+              },
+          },
+          markPoint: {
+            symbol:'circle',
+            symbolSize:5,
+            itemStyle: {
+              color: "#432f0d"
+            },
+            data: [
+              {
+                x: "50%",
+                y: "55%",
+              }
+            ],
+          },
+          data: [4]
+        }]
+      },
+      chartCssStyle4: {
+        width: 400,
+        height: 350,
+        top: 966,
+        left: 612,
+      },
+      chartOption4: {
+        backgroundColor:"transparent",
+        series: [
+          {
+            name: "小指针",
+            type: "gauge",
+            radius: "80%",
+            center: ["50%", "55%"],
+            startAngle: 235,
+            endAngle: -55,
+            splitNumber: 10,
+            min: 0,
+            max: 100,
+            axisTick: {
+              show: false
+            },
+            axisLine: {
+              lineStyle: {
+                color: [[1, new echarts.graphic.LinearGradient(
+                  0, 0, 0, 1, [{
+                      offset: 0,
+                      color: '#FF8784',
+                    },
+                    {
+                      offset: 1,
+                      color: '#F90D00',
+                    }
+                  ]
+                )]],
+                width: 25,
+                opacity: 0.9
+              }
+            },
+            splitLine: {
+              show: false
+            },
+            axisLabel: {
+              show: false,
+            },
+            detail: {
+              show: false
+            },
+            pointer: {
+              show: true,
+              showAbove: false,
+              width: 8,
+              length: "35%",
+            },
+            data: [35]
+        },{
+          name: "刻度文字",
+          type: "gauge",
+          radius: "80%",
+          center: ["50%", "55%"],
+          startAngle: 235,
+          endAngle: -55,
+          splitNumber: 10,
+          min: 0,
+          max: 100,
+          axisTick: {
+            show: false
+          },
+          axisLine: {
+            lineStyle: {
+              color: [[0.65, "#00D8F9"], [1, "#1E1E1E"]],
+              width: 25,
+              opacity: 0.9
+            }
+          },
+          splitLine: {
+            show: false
+          },
+          axisLabel: {
+            show: true,
+            distance: -70,
+            fontSize: 22,
+            color: '#9F9584',
+          },
+          detail: {
+            show: false
+          },
+          pointer: {
+            show: true,
+            showAbove: false,
+            width: 8,
+            length: "70%",
+            itemStyle: {
+              color: new echarts.graphic.LinearGradient(
+                0, 0, 0, 1, [{
+                    offset: 0,
+                    color: '#022B2E',
+                  },
+                  {
+                    offset: 1,
+                    color: '#00D8F9',
+                  }
+                ]
+              )
+            },
+          },
+          markPoint: {
+            symbol:'circle',
+            symbolSize:5,
+            itemStyle: {
+              color: "#033742"
+            },
+            data: [
+              {
+                x: "50%",
+                y: "55%",
+              }
+            ],
+          },
+          data: [65]
+        }]
+      },
     };
   },
   methods: {
@@ -1090,6 +1309,22 @@ export default {
     /* 设置滚动条滑块的hover状态样式 */
     .prediction::-webkit-scrollbar-thumb:hover {
       background-color: #2B416C;
+    }
+    .left_image {
+      width: 151px;
+      height: 129px;
+      position: absolute;
+      top: 1088px;
+      left: 273px;
+      background: url('./images/left.png');
+    }
+    .right_image {
+      width: 151px;
+      height: 129px;
+      position: absolute;
+      top: 1088px;
+      left: 737px;
+      background: url('./images/right.png');
     }
   }
 }
