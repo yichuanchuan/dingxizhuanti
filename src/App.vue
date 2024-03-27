@@ -37,4 +37,17 @@ body {
   margin: 0;
   padding: 0;
 }
+.back_image {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  &:hover {
+    opacity: 1;
+  }
+}
 </style>

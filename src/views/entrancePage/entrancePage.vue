@@ -10,6 +10,8 @@
   <div class="entrancePage">
     <div class="devopsBigScreen">
       <div :style="bigScreenStyle">
+        <!-- 返回 -->
+        <img src="/assets/images/back.png" alt="" class="back_image" @click="$router.back()" />
         <div class="vertical_text">
           <span class="vertical_text_other">“薯”</span><span class="vertical_text_other">光</span>·定西马铃薯零碳生态村落示范基地
         </div>

@@ -2,6 +2,8 @@
     <div class="footstone">
       <div class="devopsBigScreen">
         <div :style="bigScreenStyle">
+          <!-- 返回 -->
+          <img src="/assets/images/back.png" alt="" class="back_image" @click="$router.back()" />
           <!-- 静态文本 -->
           <customText v-for="(item, index) in textList" :options="item" :key="'customText' + index"></customText>
           <!-- 左上图片 -->
@@ -178,46 +180,46 @@
           {
             text: '01',
             fontSize: 44,
-            fontFamily: 'MF-FangHei-Noncommercial, MF-FangHei-Noncommercial',
+            fontFamily: 'zaozi',
             fontWeight: 400,
             textAlign: 'left',
             color: '#DDEFFF',
             width: 52,
             left: 292,
-            top: 1510,
+            top: 1520,
           },
           {
             text: '02',
             fontSize: 44,
-            fontFamily: 'MF-FangHei-Noncommercial, MF-FangHei-Noncommercial',
+            fontFamily: 'zaozi',
             fontWeight: 400,
             textAlign: 'left',
             color: '#DDEFFF',
             width: 52,
-            left: 425,
-            top: 1617,
+            left: 417,
+            top: 1627,
           },
           {
             text: '03',
             fontSize: 44,
-            fontFamily: 'MF-FangHei-Noncommercial, MF-FangHei-Noncommercial',
+            fontFamily: 'zaozi',
             fontWeight: 400,
             textAlign: 'left',
             color: '#DDEFFF',
             width: 52,
-            left: 755,
-            top: 1617,
+            left: 747,
+            top: 1627,
           },
           {
             text: '04',
             fontSize: 44,
-            fontFamily: 'MF-FangHei-Noncommercial, MF-FangHei-Noncommercial',
+            fontFamily: 'zaozi',
             fontWeight: 400,
             textAlign: 'left',
             color: '#DDEFFF',
             width: 52,
-            left: 886,
-            top: 1510,
+            left: 881,
+            top: 1520,
           },
         ],
       };

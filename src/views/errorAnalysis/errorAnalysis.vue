@@ -4,12 +4,8 @@
       <div :style="bigScreenStyle">
         <!-- 返回 -->
         <img src="/assets/images/back.png" alt="" class="back_image" @click="$router.back()" />
-        <!-- 左侧文本 -->
-        <div class="left_text">
-          一是选取分布式光伏功率预测影响典型因子，使用灰色关联度和余弦相似度算法进行集成，构建相似时刻模型;二是结合时序理论，采用时序差分、滑动窗口等方式构建时序特征和离散特征，结合站点容量、气象条件等多方要素，使用 XGBOOST集成算法完成功率预测模型构建；三是模型预测准确率保障在90%以上，其中通渭县典型区域和站点功率预测准确率达93.29%。
-        </div>
-        <!-- 右侧图片 -->
-        <div class="right_image1"></div>
+        <!-- 静态文本 -->
+        <customText v-for="(item, index) in textList" :options="item" :key="'customText' + index"></customText>
         <!-- 右下角echarts -->
         <commonCharts :option="chartOption" :chartIndex="0" :cssStyle="chartCssStyle"></commonCharts>
         <!-- 表格1 -->
@@ -56,118 +52,183 @@ export default {
       changeBig: false,
       width: 3840,
       height: 2160,
+      textList: [
+        {
+          text: '研究各类数据分布规律，结合区域实际现状，集中开展数据兄余、异常等数据治理工作，推动数据质量常态化治理，以用促治稳步提升数据质量。',
+          fontSize: 32,
+          fontFamily: 'PingFangSC, PingFang SC',
+          fontWeight: 500,
+          textAlign: 'left',
+          color: '#BCE3FF',
+          width: 720,
+          left: 2792,
+          top: 377,
+          lineHeight: 50
+        },
+        {
+          text: '开展不同站点模型优化工作，针对分站点、电压等级、装机容量的功率预测模型优化，增强模型泛化能力，提升各站点模型预测准确率。',
+          fontSize: 32,
+          fontFamily: 'PingFangSC, PingFang SC',
+          fontWeight: 500,
+          textAlign: 'left',
+          color: '#BCE3FF',
+          width: 720,
+          left: 2502,
+          top: 752,
+          lineHeight: 45
+        },
+        {
+          text: '全面梳理影响负荷的各类关键影响因素以及关联关系,研究适用于定西电网分类负荷的分析及预测方法，持续提高电网负荷分析预测的效率和准确率。',
+          fontSize: 32,
+          fontFamily: 'PingFangSC, PingFang SC',
+          fontWeight: 500,
+          textAlign: 'left',
+          color: '#BCE3FF',
+          width: 720,
+          left: 2901,
+          top: 1086,
+          lineHeight: 45
+        },
+      ],
       chartCssStyle: {
-        width: 1400,
-        height: 660,
-        top: 1400,
-        left: 2340,
+        width: 2170,
+        height: 561,
+        top: 464,
+        left: 135,
       },
       chartOption: {
         backgroundColor: 'transparent',
         grid: {
-          left: '8%',
-          right: '8%',
-          bottom: '14%',
-          top:'16%',
-          containLabel: true
+          top: '5%',
+          bottom: '15%', //也可设置left和right设置距离来控制图表的大小
+          left: '4%',
+          right: '4%'
         },
-        legend: {
-          data: ['预测功率', '实际功率'],
-          // right: 10,
-          top: 15,
-          textStyle: {
-              color: "#BCE3FF",
-              fontSize: 22
-          },
-          itemWidth: 40,
-          itemHeight: 18,
-          itemStyle: {
-            // 设置图例标记的样式
-            color: 'transparent', // 颜色
-          },
-          itemGap: 35
-        },
-        xAxis: {
-          type: 'category',
-          data: ['03-02 00:00', '03-02 06:00', '03-02 12:00', '03-02 18:00',
-          '03-03 00:00', '03-03 06:00', '03-03 12:00', '03-03 18:00',
-          '03-04 00:00', '03-04 06:00', '03-04 12:00', '03-04 18:00',
-          '03-05 00:00', '03-05 06:00', '03-05 12:00', '03-05 18:00',
-          '03-06 00:00', '03-06 06:00', '03-06 12:00', '03-06 18:00'],
-          axisLine: {
-            show: true,
-            // onZero: false,
-            lineStyle: {
-              color: "rgba(59, 76, 90, 1)",
-              width: 2
-            }
-          },
-          axisLabel: {
-            interval: 5,
-            textStyle: {
-              fontFamily: 'Microsoft YaHei',
-              fontSize: '22',
-              color: '#BCE3FF'
-            }
-          },
-          offset: 20,
-          axisTick: {
-            show: false,
-          },
-        },
-        yAxis: {
-          type: 'value',
-          max:'3000',
-          splitNumber: 6,
-          splitLine: {
-            show: true,
-            lineStyle: {
-              color: '#3B4C5A',
-                type: 'dashed' // ! 网格虚线设置
-            }
-          },
-          axisLabel: {
-            textStyle: {
-              color: '#BCE3FF',
-              fontWeight: 400,
-              fontSize: '22',
-              margin: 22
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'shadow',
+            label: {
+              show: false,
             },
           },
+          textStyle: {
+            align: 'left',
+          },
+        },
+        xAxis: {
+          data: ['03-03 00:00', '03-03 01:00', '03-03 02:00', '03-03 03:00',
+          '03-03 04:00', '03-03 05:00', '03-03 06:00', '03-03 07:00',
+          '03-03 08:00', '03-03 09:00', '03-03 10:00', '03-03 11:00',
+          '03-03 12:00', '03-03 13:00', '03-03 14:00', '03-03 15:00',
+          '03-03 16:00', '03-03 17:00', '03-03 18:00', '03-03 19:00',
+          '03-03 20:00', '03-03 21:00', '03-03 22:00'],
+          interval: 0,
+          offset: 15,
           axisLine: {
+            show: false, //隐藏X轴轴线
+          },
+          axisTick: {
+            show: false, //隐藏X轴刻度
+          },
+          axisLabel: {
             show: true,
+            textStyle: {
+              color: '#BCE3FF', //X轴文字颜色
+              fontSize: '22'
+            },
+          },
+        },
+        yAxis: [
+          {
+            type: 'value',
+            splitLine: {
+              show: true,
+              lineStyle: {
+                color: 'rgba(59, 76, 90, 1)',
+                type: 'dashed' // ! 网格虚线设置
+              }
+            },
+            max: 90,
+            min: 60,
+            scale: true,
+            splitNumber: 3,
+            axisTick: {
+              show: false,
+            },
+            axisLine: {
+              show: false
+            },
+            axisLabel: {
+              show: true,
+              textStyle: {
+                color: '#BCE3FF',
+                fontSize: '22'
+              },
+            },
+          }
+        ],
+        series: [
+          {
+            name: '',
+            type: 'line',
+            yAxisIndex: 0,
+            smooth: true, //平滑曲线显示
+            symbol: 'circle', //标记的图形为实心圆
+            symbolSize: 14, //标记的大小
+            // showSymbol: false,
+            areaStyle: {
+              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                offset: 0,
+                color: 'rgba(0, 217, 192, 0.28)'
+              }, {
+                offset: 1,
+                color: 'rgba(0, 217, 193, 0)'
+              }]),
+              origin: "start"
+            },
+            itemStyle: {
+              //折线拐点标志的样式
+              color: {
+                type: 'radial',
+                colorStops: [
+                  {
+                    offset: 0,
+                    color: '#00FFD3',
+                  },
+                  {
+                    offset: 0.5,
+                    color: '#00FFD3',
+                  },
+                  {
+                    offset: 0.5,
+                    color: 'rgba(73, 214, 202, 0.5)',
+                  },
+                  {
+                    offset: 1,
+                    color: 'rgba(73, 214, 202, 0.5)',
+                  },
+                ],
+              },
+              borderColor: 'rgba(73, 214, 202, 0.5)',
+              borderWidth: 8,
+              // shadowColor: 'rgba(73, 214, 202, 0.5)',
+              // shadowBlur: 0
+            },
             lineStyle: {
-              color: 'rgba(59, 76, 90, 1)',
-              width: 2
-            }
-          },
-        },
-        series: [{
-          name: '实际功率',
-          data: [0, 0, 2800, 0, 0, 1580, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-          type: 'line',
-          smooth: true, // 可选，平滑线
-          symbol: 'none',
-          itemStyle: {
-            normal: {
-              color: 'rgba(0, 233, 255, 1)' // 折线颜色
-            }
-          },
-          symbolSize: 10,
-        },
-        {
-          name: '预测功率',
-          data: [0, 0, 2100, 200, 0, 1600, 0, 0, 2300, 50, 50, 50, 2300, 50, 50, 50, 2100, 50, 0, 0],
-          type: 'line',
-          smooth: true, // 可选，平滑线
-          symbol: 'none',
-          itemStyle: {
-            normal: {
-              color: 'rgba(255, 85, 169, 1)' // 折线颜色
-            }
-          },
-          symbolSize: 10,
-        }]
+              width: 2,
+              color: 'rgba(0, 255, 211, 1)',
+              // shadowColor: '#FF803E',
+              // shadowBlur: 5,
+              shadowOffsetX: 0,
+              shadowOffsetY: 0,
+              opacity: 0.8,
+            },
+            z: 5,
+            data: [90, 90, 90, 90, 90, 90, 90, 90, 87, 87, 87, 87, 87, 87.5,
+            88, 88, 87.5, 87.5, 87.5, 87.5, 90, 90, 90],
+          }
+        ],
       },
       predictionList1: [
         [
@@ -191,7 +252,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '231px',
+            width: '234px',
             borderLeft: '1px solid #3F5B6F'
           },
           {
@@ -207,7 +268,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '231px',
+            width: '234px',
             borderLeft: '1px solid #3F5B6F'
           },
           {
@@ -223,7 +284,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '231px',
+            width: '233px',
             borderLeft: '1px solid #3F5B6F'
           },
           {
@@ -239,7 +300,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '213px',
+            width: '214px',
             borderLeft: '1px solid #3F5B6F'
           },
         ],
@@ -252,7 +313,7 @@ export default {
             width: '224px'
           },
           {
-            text: '0.16',
+            text: '5.65',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -260,7 +321,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '0.15',
+            text: '8.52',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '234px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '9.85',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -268,7 +337,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '0.16',
+            text: '5.86',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '234px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '3.05',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -276,7 +353,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '0.15',
+            text: '1.55',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '233px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '8.95',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -284,35 +369,11 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '0.15',
+            text: '7.26',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '231px',
-            borderLeft: '1px solid #3F5B6F'
-          },
-          {
-            text: '0.15',
-            fontSize: '24px',
-            color: '#A4B3CD',
-            fontWeight: 500,
-            width: '231px',
-            borderLeft: '1px solid #3F5B6F'
-          },
-          {
-            text: '0.44',
-            fontSize: '24px',
-            color: '#A4B3CD',
-            fontWeight: 500,
-            width: '231px',
-            borderLeft: '1px solid #3F5B6F'
-          },
-          {
-            text: '0.46',
-            fontSize: '24px',
-            color: '#A4B3CD',
-            fontWeight: 500,
-            width: '213px',
+            width: '214px',
             borderLeft: '1px solid #3F5B6F'
           },
         ],
@@ -325,7 +386,7 @@ export default {
             width: '224px'
           },
           {
-            text: '0.15',
+            text: '6.31',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -333,7 +394,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '0.15',
+            text: '7.74',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '234px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '8.57',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -341,7 +410,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '0.15',
+            text: '6.56',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '234px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '3.13',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -349,7 +426,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '0.15',
+            text: '1.01',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '233px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '6.34',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -357,7 +442,24 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '0.15',
+            text: '8.38',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '214px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+        ],
+        [
+          {
+            text: '准确率(%)',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '224px'
+          },
+          {
+            text: '96.98',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -365,7 +467,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '0.15',
+            text: '97.42',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '234px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '96.85',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -373,7 +483,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '0.44',
+            text: '97.72',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '234px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '98.11',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -381,11 +499,27 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '0.45',
+            text: '96.68',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '213px',
+            width: '233px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '97.08',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '231px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '97.16',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '214px',
             borderLeft: '1px solid #3F5B6F'
           },
         ]
@@ -412,7 +546,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '231px',
+            width: '234px',
             borderLeft: '1px solid #3F5B6F'
           },
           {
@@ -428,7 +562,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '231px',
+            width: '234px',
             borderLeft: '1px solid #3F5B6F'
           },
           {
@@ -444,7 +578,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '231px',
+            width: '233px',
             borderLeft: '1px solid #3F5B6F'
           },
           {
@@ -460,7 +594,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '213px',
+            width: '214px',
             borderLeft: '1px solid #3F5B6F'
           },
         ],
@@ -473,7 +607,7 @@ export default {
             width: '224px'
           },
           {
-            text: '13.17',
+            text: '176.39',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -481,7 +615,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '245.32',
+            text: '1361.66',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '234px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '3335.44',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -489,7 +631,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '511.09',
+            text: '5613.32',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '234px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '8042.18',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -497,7 +647,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '827',
+            text: '9464.23',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '233px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '10838.25',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -505,35 +663,11 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '1139.67',
+            text: '9337.31',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '231px',
-            borderLeft: '1px solid #3F5B6F'
-          },
-          {
-            text: '1587.55',
-            fontSize: '24px',
-            color: '#A4B3CD',
-            fontWeight: 500,
-            width: '231px',
-            borderLeft: '1px solid #3F5B6F'
-          },
-          {
-            text: '1609.01',
-            fontSize: '24px',
-            color: '#A4B3CD',
-            fontWeight: 500,
-            width: '231px',
-            borderLeft: '1px solid #3F5B6F'
-          },
-          {
-            text: '1397.72',
-            fontSize: '24px',
-            color: '#A4B3CD',
-            fontWeight: 500,
-            width: '213px',
+            width: '214px',
             borderLeft: '1px solid #3F5B6F'
           },
         ],
@@ -546,7 +680,7 @@ export default {
             width: '224px'
           },
           {
-            text: '11.2',
+            text: '247',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -554,7 +688,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '269.21',
+            text: '1756.03',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '234px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '4224.58',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -562,7 +704,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '498.14',
+            text: '6000.53',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '234px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '8050.59',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -570,7 +720,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '793.36',
+            text: '9416.77',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '233px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '10936.51',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -578,7 +736,24 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '1068.29',
+            text: '9512.82',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '214px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+        ],
+        [
+          {
+            text: '准确率(%)',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '224px'
+          },
+          {
+            text: '74.16',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -586,7 +761,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '1518.68',
+            text: '74.29',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '234px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '72.07',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -594,7 +777,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '1597.59',
+            text: '77.43',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '234px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '78.21',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -602,11 +793,27 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '1387.86',
+            text: '83.41',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '213px',
+            width: '233px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '85.01',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '231px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '88.86',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '214px',
             borderLeft: '1px solid #3F5B6F'
           },
         ]
@@ -633,7 +840,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '231px',
+            width: '234px',
             borderLeft: '1px solid #3F5B6F'
           },
           {
@@ -649,7 +856,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '231px',
+            width: '234px',
             borderLeft: '1px solid #3F5B6F'
           },
           {
@@ -665,7 +872,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '231px',
+            width: '233px',
             borderLeft: '1px solid #3F5B6F'
           },
           {
@@ -681,7 +888,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '213px',
+            width: '214px',
             borderLeft: '1px solid #3F5B6F'
           },
         ],
@@ -694,7 +901,7 @@ export default {
             width: '224px'
           },
           {
-            text: '959.23',
+            text: '4723.56',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -702,7 +909,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '557.95',
+            text: '2005.61',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '234px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '712.72',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -710,7 +925,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '100.45',
+            text: '11.44',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '234px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '7.01',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -718,7 +941,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '5.08',
+            text: '7.03',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '233px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '3.7',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -726,35 +957,11 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '0.47',
+            text: '4.03',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '231px',
-            borderLeft: '1px solid #3F5B6F'
-          },
-          {
-            text: '0.17',
-            fontSize: '24px',
-            color: '#A4B3CD',
-            fontWeight: 500,
-            width: '231px',
-            borderLeft: '1px solid #3F5B6F'
-          },
-          {
-            text: '0.17',
-            fontSize: '24px',
-            color: '#A4B3CD',
-            fontWeight: 500,
-            width: '231px',
-            borderLeft: '1px solid #3F5B6F'
-          },
-          {
-            text: '0.16',
-            fontSize: '24px',
-            color: '#A4B3CD',
-            fontWeight: 500,
-            width: '213px',
+            width: '214px',
             borderLeft: '1px solid #3F5B6F'
           },
         ],
@@ -767,7 +974,7 @@ export default {
             width: '224px'
           },
           {
-            text: '972.1',
+            text: '4482.32',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -775,7 +982,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '541.77',
+            text: '2519.53',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '234px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '670.41',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -783,7 +998,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '80.74',
+            text: '10.16',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '234px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '6.59',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -791,7 +1014,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '4.86',
+            text: '6.13',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '233px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '6.19',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -799,7 +1030,24 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '0.45',
+            text: '5.84',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '214px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+        ],
+        [
+          {
+            text: '准确率(%)',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '224px'
+          },
+          {
+            text: '84.5',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -807,7 +1055,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '0.17',
+            text: '81.97',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '234px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '82.28',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -815,7 +1071,15 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '0.17',
+            text: '84.57',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '234px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '96.0',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
@@ -823,11 +1087,27 @@ export default {
             borderLeft: '1px solid #3F5B6F'
           },
           {
-            text: '0.17',
+            text: '96.19',
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '213px',
+            width: '233px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '96.1',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '231px',
+            borderLeft: '1px solid #3F5B6F'
+          },
+          {
+            text: '96.73',
+            fontSize: '24px',
+            color: '#A4B3CD',
+            fontWeight: 500,
+            width: '214px',
             borderLeft: '1px solid #3F5B6F'
           },
         ]
@@ -888,29 +1168,6 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    .left_text {
-      width: 1065px;
-      height: 800px;
-      position: absolute;
-      top: 322px;
-      left: 154px;
-      font-weight: 500;
-      font-size: 50px;
-      color: #7BB3E6;
-      line-height: 100px;
-    }
-    .right_image1 {
-      width: 2410px;
-      height: 644px;
-      position: absolute;
-      top: 400px;
-      left: 1276px;
-      background: url('./images/img.png');
-      transition: transform 0.3s; /* 添加过渡效果 */
-      &:hover {
-        transform: scale(1.04); /* 在悬停时放大 1.04 倍 */
-      }
-    }
     .prediction {
       position: absolute;
       width: 2072px;
@@ -926,15 +1183,15 @@ export default {
       }
     }
     .prediction1 {
-      top: 1434px;
+      top: 1252px;
       left: 160px;
     }
     .prediction2 {
-      top: 1646px;
+      top: 1510px;
       left: 160px;
     }
     .prediction3 {
-      top: 1858px;
+      top: 1768px;
       left: 160px;
     }
   }

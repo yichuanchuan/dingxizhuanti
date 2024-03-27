@@ -17,6 +17,8 @@ import weatherForecast from '../views/weatherForecast/weatherForecast.vue';
 import introduction from '../views/introduction/introduction.vue';
 import scene from '../views/scene/scene.vue';
 import patent from '../views/patent/patent.vue';
+import database from '../views/database/database.vue';
+import errorAnalysis from '../views/errorAnalysis/errorAnalysis.vue';
 Vue.use(VueRouter);
 
 const routes = [
@@ -29,6 +31,8 @@ const routes = [
   { path: '/introduction', meta: { name: '简介' }, component: introduction },
   { path: '/scene', meta: { name: '四大场景' }, component: scene },
   { path: '/patent', meta: { name: '专利成果' }, component: patent },
+  { path: '/database', meta: { name: '数据站点' }, component: database },
+  { path: '/errorAnalysis', meta: { name: '误差分析' }, component: errorAnalysis },
 ];
 
 const router = new VueRouter({

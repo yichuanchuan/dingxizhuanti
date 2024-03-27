@@ -14,3 +14,7 @@
   font-family: 'siyuan';
   src: url('../fonts/siyuan.otf') format('truetype');
 }
+@font-face {
+  font-family: 'zaozi';
+  src: url('../fonts/zaozi.ttf') format('truetype');
+}

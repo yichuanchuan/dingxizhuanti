@@ -1,15 +1,9 @@
-<!--
- * @Author: yichuanhao 1274816963@qq.com
- * @Date: 2024-03-20 21:42:51
- * @LastEditors: yichuanhao 1274816963@qq.com
- * @LastEditTime: 2024-03-23 09:57:45
- * @FilePath: \pingxiproject\src\src\home.vue
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
--->
 <template>
   <div class="footstone">
     <div class="devopsBigScreen">
       <div :style="bigScreenStyle">
+        <!-- 返回 -->
+        <img src="/assets/images/back.png" alt="" class="back_image" @click="$router.back()" />
         <!-- 静态文本 -->
         <customText v-for="(item, index) in textList" :options="item" :key="'customText' + index"></customText>
         <!-- 右侧图片 -->

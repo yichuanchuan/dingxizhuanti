@@ -2,6 +2,8 @@
   <div class="weatherForecast">
     <div class="devopsBigScreen">
       <div :style="bigScreenStyle">
+        <!-- 返回 -->
+        <img src="/assets/images/back.png" alt="" class="back_image" @click="$router.back()" />
         <!-- 静态文本 -->
         <customText v-for="(item, index) in textList" :options="item" :key="'customText' + index"></customText>
         <div class="prediction">
