@@ -1171,7 +1171,8 @@ export default {
     .prediction {
       position: absolute;
       width: 2072px;
-      height: 176px;
+      height: 234px;
+      background: url('./images/table.png');
       .prediction_item {
         display: flex;
         .prediction_item_text {

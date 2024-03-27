@@ -915,6 +915,7 @@ export default {
       position: absolute;
       width: 2072px;
       height: 176px;
+      background: url('./images/table.png');
       .prediction_item {
         display: flex;
         .prediction_item_text {

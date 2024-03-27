@@ -198,6 +198,7 @@ export default {
             text: '线路名称',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '177px'
           },
@@ -205,6 +206,7 @@ export default {
             text: '站点名称',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '144px'
           },
@@ -212,6 +214,7 @@ export default {
             text: '接入电压 等级(v)',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '125px'
           },
@@ -219,6 +222,7 @@ export default {
             text: '装机 容量(kW)',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '143px'
           },
@@ -226,6 +230,7 @@ export default {
             text: '并网变电站 及10kv线路',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '140px',
             padding: '0 70px'
@@ -234,6 +239,7 @@ export default {
             text: '并网点',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '173px'
           },
@@ -241,6 +247,7 @@ export default {
             text: '是否为 村级电站',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 15px'
@@ -249,6 +256,7 @@ export default {
             text: '是否为 扶贫电站',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 30px'
@@ -257,6 +265,7 @@ export default {
             text: '状态',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '115px'
           },
@@ -273,6 +282,7 @@ export default {
             text: '35kv宁远变 115…',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '177px'
           },
@@ -280,6 +290,7 @@ export default {
             text: '黄金胜',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '144px'
           },
@@ -287,6 +298,7 @@ export default {
             text: '220v',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '125px'
           },
@@ -294,6 +306,7 @@ export default {
             text: '3',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '143px'
           },
@@ -301,6 +314,7 @@ export default {
             text: '35kv宁远变35kv……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '280px'
           },
@@ -308,6 +322,7 @@ export default {
             text: '35kv宁远变 115…',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '173px'
           },
@@ -315,6 +330,7 @@ export default {
             text: '否',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 15px'
@@ -323,6 +339,7 @@ export default {
             text: '是',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 30px'
@@ -331,6 +348,7 @@ export default {
             text: '已投运',
             fontSize: '24px',
             color: '#A6B74F',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '115px'
           },
@@ -347,6 +365,7 @@ export default {
             text: '35kv鲁家沟变 115……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '177px'
           },
@@ -354,6 +373,7 @@ export default {
             text: '黄磐华',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '144px'
           },
@@ -361,6 +381,7 @@ export default {
             text: '220v',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '125px'
           },
@@ -368,6 +389,7 @@ export default {
             text: '3',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '143px'
           },
@@ -375,6 +397,7 @@ export default {
             text: '35kv鲁家沟变35……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '280px'
           },
@@ -382,6 +405,7 @@ export default {
             text: '35kv鲁家沟变 115……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '173px'
           },
@@ -389,6 +413,7 @@ export default {
             text: '否',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 15px'
@@ -397,6 +422,7 @@ export default {
             text: '是',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 30px'
@@ -405,6 +431,7 @@ export default {
             text: '已投运',
             fontSize: '24px',
             color: '#A6B74F',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '115px'
           },
@@ -421,6 +448,7 @@ export default {
             text: '35kv宁远变 115…',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '177px'
           },
@@ -428,6 +456,7 @@ export default {
             text: '黄建成',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '144px'
           },
@@ -435,6 +464,7 @@ export default {
             text: '220v',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '125px'
           },
@@ -442,6 +472,7 @@ export default {
             text: '3',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '143px'
           },
@@ -449,6 +480,7 @@ export default {
             text: '35kv宁远变35kv……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '280px'
           },
@@ -456,6 +488,7 @@ export default {
             text: '35kv宁远变 115…',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '173px'
           },
@@ -463,6 +496,7 @@ export default {
             text: '否',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 15px'
@@ -471,6 +505,7 @@ export default {
             text: '是',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 30px'
@@ -479,6 +514,7 @@ export default {
             text: '已投运',
             fontSize: '24px',
             color: '#A6B74F',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '115px'
           },
@@ -495,6 +531,7 @@ export default {
             text: '35kv宁远变 115…',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '177px'
           },
@@ -502,6 +539,7 @@ export default {
             text: '黄世雄',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '144px'
           },
@@ -509,6 +547,7 @@ export default {
             text: '220v',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '125px'
           },
@@ -516,6 +555,7 @@ export default {
             text: '3',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '143px'
           },
@@ -523,6 +563,7 @@ export default {
             text: '35kv宁远变35kv……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '280px'
           },
@@ -530,6 +571,7 @@ export default {
             text: '35kv宁远变 115…',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '173px'
           },
@@ -537,6 +579,7 @@ export default {
             text: '否',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 15px'
@@ -545,6 +588,7 @@ export default {
             text: '是',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 30px'
@@ -553,6 +597,7 @@ export default {
             text: '已投运',
             fontSize: '24px',
             color: '#A6B74F',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '115px'
           },
@@ -569,6 +614,7 @@ export default {
             text: '35kv鲁家沟变 115……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '177px'
           },
@@ -576,6 +622,7 @@ export default {
             text: '麻玉和',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '144px'
           },
@@ -583,6 +630,7 @@ export default {
             text: '220v',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '125px'
           },
@@ -590,6 +638,7 @@ export default {
             text: '3',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '143px'
           },
@@ -597,6 +646,7 @@ export default {
             text: '35kv鲁家沟变35……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '280px'
           },
@@ -604,6 +654,7 @@ export default {
             text: '35kv鲁家沟变 115……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '173px'
           },
@@ -611,6 +662,7 @@ export default {
             text: '否',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 15px'
@@ -619,6 +671,7 @@ export default {
             text: '是',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 30px'
@@ -627,6 +680,7 @@ export default {
             text: '已投运',
             fontSize: '24px',
             color: '#A6B74F',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '115px'
           },
@@ -643,6 +697,7 @@ export default {
             text: '35kv鲁家沟变 115……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '177px'
           },
@@ -650,6 +705,7 @@ export default {
             text: '麻润成',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '144px'
           },
@@ -657,6 +713,7 @@ export default {
             text: '220v',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '125px'
           },
@@ -664,6 +721,7 @@ export default {
             text: '3',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '143px'
           },
@@ -671,6 +729,7 @@ export default {
             text: '35kv鲁家沟变35……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '280px'
           },
@@ -678,6 +737,7 @@ export default {
             text: '35kv鲁家沟变 115……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '173px'
           },
@@ -685,6 +745,7 @@ export default {
             text: '否',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 15px'
@@ -693,6 +754,7 @@ export default {
             text: '是',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 30px'
@@ -701,6 +763,7 @@ export default {
             text: '已投运',
             fontSize: '24px',
             color: '#A6B74F',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '115px'
           },
@@ -717,6 +780,7 @@ export default {
             text: '35kv鲁家沟变 115……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '177px'
           },
@@ -724,6 +788,7 @@ export default {
             text: '麻守远',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '144px'
           },
@@ -731,6 +796,7 @@ export default {
             text: '220v',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '125px'
           },
@@ -738,6 +804,7 @@ export default {
             text: '3',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '143px'
           },
@@ -745,6 +812,7 @@ export default {
             text: '35kv鲁家沟变35……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '280px'
           },
@@ -752,6 +820,7 @@ export default {
             text: '35kv鲁家沟变 115……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '173px'
           },
@@ -759,6 +828,7 @@ export default {
             text: '否',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 15px'
@@ -767,6 +837,7 @@ export default {
             text: '是',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 30px'
@@ -775,6 +846,7 @@ export default {
             text: '已投运',
             fontSize: '24px',
             color: '#A6B74F',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '115px'
           },
@@ -791,6 +863,7 @@ export default {
             text: '35kv鲁家沟变 115……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '177px'
           },
@@ -798,6 +871,7 @@ export default {
             text: '麻守军',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '144px'
           },
@@ -805,6 +879,7 @@ export default {
             text: '220v',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '125px'
           },
@@ -812,6 +887,7 @@ export default {
             text: '3',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '143px'
           },
@@ -819,6 +895,7 @@ export default {
             text: '35kv鲁家沟变35……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '280px'
           },
@@ -826,6 +903,7 @@ export default {
             text: '35kv鲁家沟变 115……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '173px'
           },
@@ -833,6 +911,7 @@ export default {
             text: '否',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 15px'
@@ -841,6 +920,7 @@ export default {
             text: '是',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 30px'
@@ -849,6 +929,7 @@ export default {
             text: '已投运',
             fontSize: '24px',
             color: '#A6B74F',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '115px'
           },
@@ -865,6 +946,7 @@ export default {
             text: '110kv西郊变 122……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '177px'
           },
@@ -872,6 +954,7 @@ export default {
             text: '鲍菊萍',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '144px'
           },
@@ -879,6 +962,7 @@ export default {
             text: '220v',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '125px'
           },
@@ -886,6 +970,7 @@ export default {
             text: '4',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '143px'
           },
@@ -893,6 +978,7 @@ export default {
             text: '110kv西郊变110……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '280px'
           },
@@ -900,6 +986,7 @@ export default {
             text: '110kv西郊变 122……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '173px'
           },
@@ -907,6 +994,7 @@ export default {
             text: '否',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 15px'
@@ -915,6 +1003,7 @@ export default {
             text: '否',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 30px'
@@ -923,6 +1012,7 @@ export default {
             text: '已投运',
             fontSize: '24px',
             color: '#A6B74F',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '115px'
           },
@@ -939,6 +1029,7 @@ export default {
             text: '35kv鲁家沟变 115……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '177px'
           },
@@ -946,6 +1037,7 @@ export default {
             text: '魏英',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '144px'
           },
@@ -953,6 +1045,7 @@ export default {
             text: '220v',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '125px'
           },
@@ -960,6 +1053,7 @@ export default {
             text: '3',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '143px'
           },
@@ -967,6 +1061,7 @@ export default {
             text: '35kv鲁家沟变35……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '280px'
           },
@@ -974,6 +1069,7 @@ export default {
             text: '35kv鲁家沟变 115……',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '173px'
           },
@@ -981,6 +1077,7 @@ export default {
             text: '否',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 15px'
@@ -989,6 +1086,7 @@ export default {
             text: '是',
             fontSize: '24px',
             color: '#A4B3CD',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
             padding: '0 30px'
@@ -997,6 +1095,7 @@ export default {
             text: '已投运',
             fontSize: '24px',
             color: '#A6B74F',
+            borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '115px'
           },
@@ -1064,6 +1163,7 @@ export default {
       height: 1242px;
       top: 406px;
       left: 2080px;
+      background: url('./images/table.png');
       .prediction_item {
         display: flex;
         .prediction_item_text {

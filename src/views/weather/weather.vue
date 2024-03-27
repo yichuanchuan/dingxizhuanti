@@ -1065,6 +1065,12 @@ export default {
           top:'16%',
           containLabel: true
         },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: { // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+          }
+        },
         xAxis: {
           type: 'category',
           data: ['2024-03-04 20:00:00', '2024-03-04 21:00:00',
@@ -1156,6 +1162,12 @@ export default {
           bottom: '14%',
           top:'16%',
           containLabel: true
+        },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: { // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+          }
         },
         xAxis: {
           type: 'category',
@@ -1252,6 +1264,12 @@ export default {
           top:'16%',
           containLabel: true
         },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: { // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+          }
+        },
         xAxis: {
           type: 'category',
           data: ['2024-03-04 20:00:00', '2024-03-04 21:00:00',
@@ -1335,6 +1353,12 @@ export default {
           bottom: '14%',
           top:'16%',
           containLabel: true
+        },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: { // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+          }
         },
         xAxis: {
           type: 'category',
@@ -1426,6 +1450,12 @@ export default {
           top:'16%',
           containLabel: true
         },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: { // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+          }
+        },
         xAxis: {
           type: 'category',
           data: ['2024-03-04 20:00:00', '2024-03-04 21:00:00',
@@ -1515,6 +1545,12 @@ export default {
           bottom: '14%',
           top:'16%',
           containLabel: true
+        },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: { // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+          }
         },
         legend: {
           data: ['温度', '湿度'],
@@ -1654,6 +1690,12 @@ export default {
           bottom: '14%',
           top:'16%',
           containLabel: true
+        },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: { // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+          }
         },
         legend: {
           data: ['风速', '风向'],
@@ -1814,8 +1856,6 @@ export default {
           symbolSize: 10,
         }]
       },
-
-      
       chartCssStyle8: {
         width: 794,
         height: 550,
@@ -1830,6 +1870,12 @@ export default {
           bottom: '14%',
           top:'16%',
           containLabel: true
+        },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: { // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+          }
         },
         legend: {
           data: ['大气压', '降雨量'],
@@ -2052,8 +2098,8 @@ export default {
       left: 2402px;
       height: 592px;
       width: 1318px;
+      background: url('./images/table.png');
       .prediction_item {
-        border-bottom: 1px solid #3F5B6F;
         display: flex;
         .prediction_item_text {
           display: flex;
