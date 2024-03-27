@@ -54,40 +54,28 @@ export default {
       height: 2160,
       textList: [
         {
-          text: '研究各类数据分布规律，结合区域实际现状，集中开展数据兄余、异常等数据治理工作，推动数据质量常态化治理，以用促治稳步提升数据质量。',
-          fontSize: 32,
-          fontFamily: 'PingFangSC, PingFang SC',
-          fontWeight: 500,
-          textAlign: 'left',
-          color: '#BCE3FF',
-          width: 720,
-          left: 2792,
-          top: 377,
-          lineHeight: 50
-        },
-        {
           text: '开展不同站点模型优化工作，针对分站点、电压等级、装机容量的功率预测模型优化，增强模型泛化能力，提升各站点模型预测准确率。',
-          fontSize: 32,
+          fontSize: 52,
           fontFamily: 'PingFangSC, PingFang SC',
-          fontWeight: 500,
+          fontWeight: 400,
           textAlign: 'left',
           color: '#BCE3FF',
-          width: 720,
-          left: 2502,
-          top: 752,
-          lineHeight: 45
+          width: 987,
+          left: 2591,
+          top: 469,
+          lineHeight: 73
         },
         {
           text: '全面梳理影响负荷的各类关键影响因素以及关联关系,研究适用于定西电网分类负荷的分析及预测方法，持续提高电网负荷分析预测的效率和准确率。',
-          fontSize: 32,
+          fontSize: 52,
           fontFamily: 'PingFangSC, PingFang SC',
-          fontWeight: 500,
+          fontWeight: 400,
           textAlign: 'left',
           color: '#BCE3FF',
-          width: 720,
-          left: 2901,
-          top: 1086,
-          lineHeight: 45
+          width: 991,
+          left: 2587,
+          top: 857,
+          lineHeight: 73
         },
       ],
       chartCssStyle: {
