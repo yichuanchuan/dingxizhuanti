@@ -50,4 +50,17 @@ body {
     opacity: 1;
   }
 }
+.over_image {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  &:hover {
+    opacity: 1;
+  }
+}
 </style>

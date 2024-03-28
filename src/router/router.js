@@ -22,7 +22,7 @@ import errorAnalysis from '../views/errorAnalysis/errorAnalysis.vue';
 Vue.use(VueRouter);
 
 const routes = [
-  { path: '/', meta: { name: '欢迎页' }, component: Home },
+  { path: '/', meta: { name: '天气预报' }, component: weatherForecast },
   { path: '/entrancePage', meta: { name: '数说定电' }, component: entrancePage },
   { path: '/footstone', meta: { name: '基石' }, component: footstone },
   { path: '/aWall', meta: { name: '一面墙' }, component: aWall },

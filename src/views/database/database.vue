@@ -4,6 +4,7 @@
       <div :style="bigScreenStyle">
         <!-- 返回 -->
         <img src="/assets/images/back.png" alt="" class="back_image" @click="$router.back()" />
+        <img src="/assets/images/next.png" alt="" class="over_image" @click="$router.push({path: '/errorAnalysis'})" />
         <!-- 静态文本 -->
         <customText v-for="(item, index) in textList" :options="item" :key="'customText' + index"></customText>
         <!-- 表格 -->
@@ -172,18 +173,18 @@ export default {
           left: 720,
           top: 1915,
         },
-        {
-          text: '有效解决数据源单一、光伏站点位置分散、设备参数差异大、历史数据质量参差不齐等问题，为供电所台区可视可测、发电功率精准预测等提供了数据基座。',
-          fontSize: 44,
-          fontFamily: 'PingFangSC, PingFang SC',
-          fontWeight: 500,
-          textAlign: 'left',
-          color: '#7BB3E6',
-          width: 1600,
-          left: 2097,
-          top: 1875,
-          lineHeight: 62
-        },
+        // {
+        //   text: '有效解决数据源单一、光伏站点位置分散、设备参数差异大、历史数据质量参差不齐等问题，为供电所台区可视可测、发电功率精准预测等提供了数据基座。',
+        //   fontSize: 44,
+        //   fontFamily: 'PingFangSC, PingFang SC',
+        //   fontWeight: 500,
+        //   textAlign: 'left',
+        //   color: '#7BB3E6',
+        //   width: 1600,
+        //   left: 2097,
+        //   top: 1875,
+        //   lineHeight: 62
+        // },
       ],
       predictionList: [
         [

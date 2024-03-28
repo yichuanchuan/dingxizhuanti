@@ -4,6 +4,7 @@
       <div :style="bigScreenStyle">
         <!-- 返回 -->
         <img src="/assets/images/back.png" alt="" class="back_image" @click="$router.back()" />
+        <img src="/assets/images/next.png" alt="" class="over_image" @click="$router.push({path: '/scene'})" />
         <!-- 左侧文本 -->
         <div class="left_text">
           一是选取分布式光伏功率预测影响典型因子，使用灰色关联度和余弦相似度算法进行集成，构建相似时刻模型;二是结合时序理论，采用时序差分、滑动窗口等方式构建时序特征和离散特征，结合站点容量、气象条件等多方要素，使用 XGBOOST集成算法完成功率预测模型构建；三是模型预测准确率保障在90%以上，其中通渭县典型区域和站点功率预测准确率达93.29%。
