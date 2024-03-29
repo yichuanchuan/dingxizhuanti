@@ -4,14 +4,10 @@
  * @Author: yichuanhao
  * @Date: 2024-03-21 09:14:53
  * @LastEditors: yichuanhao 1274816963@qq.com
- * @LastEditTime: 2024-03-29 21:21:22
+ * @LastEditTime: 2024-03-29 21:27:43
  */
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home/Home.vue';
-import entrancePage from '../views/entrancePage/entrancePage.vue';
-import footstone from '../views/footstone/footstone.vue';
-import aWall from '../views/aWall/aWall.vue';
 import weather from '../views/weather/weather.vue';
 import weatherForecast from '../views/weatherForecast/weatherForecast.vue';
 import introduction from '../views/introduction/introduction.vue';
@@ -25,10 +21,6 @@ Vue.use(VueRouter);
 
 const routes = [
   { path: '/', meta: { name: '误差分析' }, component: start },
-  { path: '/weatherForecast', meta: { name: '天气预报' }, component: weatherForecast },
-  { path: '/entrancePage', meta: { name: '数说定电' }, component: entrancePage },
-  { path: '/footstone', meta: { name: '基石' }, component: footstone },
-  { path: '/aWall', meta: { name: '一面墙' }, component: aWall },
   { path: '/weather', meta: { name: '天气' }, component: weather },
   { path: '/weatherForecast', meta: { name: '天气预报' }, component: weatherForecast },
   { path: '/introduction', meta: { name: '简介' }, component: introduction },
