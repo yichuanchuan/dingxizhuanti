@@ -52,7 +52,7 @@ export default {
   created() {},
   mounted() {
     // 实例化饼图dom
-    this.chartDom = echarts.init(document.querySelector('#chart' + this.chartIndex));
+    this.chartDom = echarts.init(document.querySelector('#chart' + this.chartIndex), null, { renderer: 'svg' });
     //监听resize
     window.addEventListener('resize', this.changeChartSize);
   },
