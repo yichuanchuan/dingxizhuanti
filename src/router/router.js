@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Author: yichuanhao
  * @Date: 2024-03-21 09:14:53
- * @LastEditors: yichuanhao
- * @LastEditTime: 2024-03-22 17:12:33
+ * @LastEditors: yichuanhao 1274816963@qq.com
+ * @LastEditTime: 2024-03-29 21:21:22
  */
 import Vue from 'vue';
 import VueRouter from 'vue-router';
@@ -19,10 +19,13 @@ import scene from '../views/scene/scene.vue';
 import patent from '../views/patent/patent.vue';
 import database from '../views/database/database.vue';
 import errorAnalysis from '../views/errorAnalysis/errorAnalysis.vue';
+import start from '../views/start/start.vue';
+import over from '../views/over/over.vue';
 Vue.use(VueRouter);
 
 const routes = [
-  { path: '/', meta: { name: '天气预报' }, component: weatherForecast },
+  { path: '/', meta: { name: '误差分析' }, component: start },
+  { path: '/weatherForecast', meta: { name: '天气预报' }, component: weatherForecast },
   { path: '/entrancePage', meta: { name: '数说定电' }, component: entrancePage },
   { path: '/footstone', meta: { name: '基石' }, component: footstone },
   { path: '/aWall', meta: { name: '一面墙' }, component: aWall },
@@ -33,6 +36,7 @@ const routes = [
   { path: '/patent', meta: { name: '专利成果' }, component: patent },
   { path: '/database', meta: { name: '数据站点' }, component: database },
   { path: '/errorAnalysis', meta: { name: '误差分析' }, component: errorAnalysis },
+  { path: '/over', meta: { name: '误差分析' }, component: over },
 ];
 
 const router = new VueRouter({

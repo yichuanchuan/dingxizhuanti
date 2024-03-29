@@ -4,6 +4,7 @@
       <div :style="bigScreenStyle">
         <!-- 返回 -->
         <img src="/assets/images/back.png" alt="" class="back_image" @click="$router.back()" />
+        <img src="/assets/images/next.png" alt="" class="over_image" @click="$router.push({ path: '/over' })" />
         <!-- 静态文本 -->
         <customText v-for="(item, index) in textList" :options="item" :key="'customText' + index"></customText>
         <!-- 右侧图片 -->
@@ -18,18 +19,10 @@
         <div class="left_image5"></div>
         <!-- 左侧文本 -->
         <div class="left_text">
-          <div>
-            发明专利<span class="color_text">3项</span>、发表<span class="color_text">EI论文1篇</span>
-          </div>
-          <div>
-            在新华网、公司门户等发表<span class="color_text">新闻报道3篇</span>
-          </div>
-          <div>
-            2023年度甘肃省优秀质量管理小组<span class="color_text">二等奖</span>
-          </div>
-          <div>
-            国网甘肃省电力公司2023年大数据应用优秀成果集
-          </div>
+          <div>发明专利<span class="color_text">3项</span>、发表<span class="color_text">EI论文1篇</span></div>
+          <div>在新华网、公司门户等发表<span class="color_text">新闻报道3篇</span></div>
+          <div>2023年度甘肃省优秀质量管理小组<span class="color_text">二等奖</span></div>
+          <div>国网甘肃省电力公司2023年大数据应用优秀成果集</div>
         </div>
       </div>
     </div>
@@ -112,7 +105,7 @@ export default {
           width: 956,
           left: 2761,
           top: 344,
-          lineHeight: 90
+          lineHeight: 90,
         },
       ],
     };
@@ -148,7 +141,7 @@ export default {
       this.onWindowResize();
     },
   },
-  created() { },
+  created() {},
   mounted() {
     this.setBigScreenStyle();
     window.addEventListener('resize', this.onWindowResize, false);
@@ -273,7 +266,7 @@ export default {
       font-family: PingFangSC, PingFang SC;
       font-weight: 500;
       font-size: 36px;
-      color: #BCE3FF;
+      color: #bce3ff;
       line-height: 50px;
       position: absolute;
       top: 1788px;
@@ -284,7 +277,7 @@ export default {
     }
 
     .color_text {
-      color: #FCB52B;
+      color: #fcb52b;
     }
   }
 }

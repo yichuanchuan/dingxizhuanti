@@ -3,12 +3,12 @@
     <div class="devopsBigScreen">
       <div :style="bigScreenStyle">
         <!-- 返回 -->
-        <!-- <img src="/assets/images/back.png" alt="" class="back_image" @click="$router.back()" /> -->
-        <img src="/assets/images/next.png" alt="" class="over_image" @click="$router.push({path: '/weather'})" />
+        <img src="/assets/images/back.png" alt="" class="back_image" @click="$router.back()" />
+        <img src="/assets/images/next.png" alt="" class="over_image" @click="$router.push({ path: '/weather' })" />
         <!-- 静态文本 -->
         <customText v-for="(item, index) in textList" :options="item" :key="'customText' + index"></customText>
         <div class="prediction">
-          <div class="prediction_item" v-for="(item, index) in predictionList" :key="index" :style="{width: `${137 * item.length}px`}">
+          <div class="prediction_item" v-for="(item, index) in predictionList" :key="index" :style="{ width: `${137 * item.length}px` }">
             <div class="prediction_item_text" v-for="(it, idx) in item" :key="idx" :style="it">{{ it.text }}</div>
           </div>
         </div>
@@ -61,70 +61,70 @@ export default {
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
-            marginBottom: '56px'
+            marginBottom: '56px',
           },
           {
             text: '03-04',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
-            marginBottom: '56px'
+            marginBottom: '56px',
           },
           {
             text: '03-04',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
-            marginBottom: '56px'
+            marginBottom: '56px',
           },
           {
             text: '03-04',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
-            marginBottom: '56px'
+            marginBottom: '56px',
           },
           {
             text: '03-04',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
-            marginBottom: '56px'
+            marginBottom: '56px',
           },
           {
             text: '03-04',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
-            marginBottom: '56px'
+            marginBottom: '56px',
           },
           {
             text: '03-04',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
-            marginBottom: '56px'
+            marginBottom: '56px',
           },
           {
             text: '03-05',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
-            marginBottom: '56px'
+            marginBottom: '56px',
           },
           {
             text: '03-05',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
-            marginBottom: '56px'
+            marginBottom: '56px',
           },
           {
             text: '03-05',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
-            marginBottom: '56px'
+            marginBottom: '56px',
           },
         ],
         [
@@ -133,70 +133,70 @@ export default {
             fontSize: '30px',
             color: 'rgba(127,183,233,0.85)',
             fontWeight: 500,
-            marginBottom: '77px'
+            marginBottom: '77px',
           },
           {
             text: '19:00',
             fontSize: '30px',
             color: 'rgba(127,183,233,0.85)',
             fontWeight: 500,
-            marginBottom: '77px'
+            marginBottom: '77px',
           },
           {
             text: '20:00',
             fontSize: '30px',
             color: 'rgba(127,183,233,0.85)',
             fontWeight: 500,
-            marginBottom: '77px'
+            marginBottom: '77px',
           },
           {
             text: '21:00',
             fontSize: '30px',
             color: 'rgba(127,183,233,0.85)',
             fontWeight: 500,
-            marginBottom: '77px'
+            marginBottom: '77px',
           },
           {
             text: '22:00',
             fontSize: '30px',
             color: 'rgba(127,183,233,0.85)',
             fontWeight: 500,
-            marginBottom: '77px'
+            marginBottom: '77px',
           },
           {
             text: '23:00',
             fontSize: '30px',
             color: 'rgba(127,183,233,0.85)',
             fontWeight: 500,
-            marginBottom: '77px'
+            marginBottom: '77px',
           },
           {
             text: '24:00',
             fontSize: '30px',
             color: 'rgba(127,183,233,0.85)',
             fontWeight: 500,
-            marginBottom: '77px'
+            marginBottom: '77px',
           },
           {
             text: '01:00',
             fontSize: '30px',
             color: 'rgba(127,183,233,0.85)',
             fontWeight: 500,
-            marginBottom: '77px'
+            marginBottom: '77px',
           },
           {
             text: '02:00',
             fontSize: '30px',
             color: 'rgba(127,183,233,0.85)',
             fontWeight: 500,
-            marginBottom: '77px'
+            marginBottom: '77px',
           },
           {
             text: '03:00',
             fontSize: '30px',
             color: 'rgba(127,183,233,0.85)',
             fontWeight: 500,
-            marginBottom: '77px'
+            marginBottom: '77px',
           },
         ],
         [
@@ -260,7 +260,7 @@ export default {
             color: '#43F2FF',
             fontWeight: 500,
           },
-        ]
+        ],
       ],
       textList: [
         {
@@ -516,27 +516,28 @@ export default {
       chartOption: {
         backgroundColor: 'transparent',
         title: {
-            // text: '汪琦玲-拉动时间轴演示',
-            textStyle: {
-                align: 'center',
-                color: '#fff',
-                fontSize: 20,
-            },
-            top: '5%',
-            left: 'center',
+          // text: '汪琦玲-拉动时间轴演示',
+          textStyle: {
+            align: 'center',
+            color: '#fff',
+            fontSize: 20,
+          },
+          top: '5%',
+          left: 'center',
         },
         tooltip: {
           trigger: 'axis',
-          axisPointer: { // 坐标轴指示器，坐标轴触发有效
-            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
-          }
+          axisPointer: {
+            // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow', // 默认为直线，可选为：'line' | 'shadow'
+          },
         },
         grid: {
           left: '2%',
           right: '4%',
           bottom: '14%',
-          top:'16%',
-          containLabel: true
+          top: '16%',
+          containLabel: true,
         },
         legend: {
           data: ['晴天', '阴天', '雨雪', '其他'],
@@ -544,8 +545,8 @@ export default {
           top: -5,
           icon: 'path://M1353.216 843.264H339.456c-185.856 0-337.92-152.064-337.92-337.92s152.064-337.92 337.92-337.92h1013.76c185.856 0 337.92 152.064 337.92 337.92s-152.064 337.92-337.92 337.92z',
           textStyle: {
-              color: "#BCE3FF",
-              fontSize: 22
+            color: '#BCE3FF',
+            fontSize: 22,
           },
           itemWidth: 40,
           itemHeight: 18,
@@ -553,136 +554,149 @@ export default {
         },
         xAxis: {
           type: 'category',
-          data: ['定西市','安定区','临洮县','陇西县','通渭县','渭源县','漳县','岷县'],
+          data: ['定西市', '安定区', '临洮县', '陇西县', '通渭县', '渭源县', '漳县', '岷县'],
           offset: 8,
           axisTick: {
-              show: false,
+            show: false,
           },
           axisLabel: {
             // interval: 0,
             // rotate: 40,
             textStyle: {
               fontFamily: 'Microsoft YaHei',
-              fontSize: '22'
-            }
+              fontSize: '22',
+            },
           },
-          axisLine: {
-            show: true,
-            lineStyle: {
-              color: "#889BAB",
-              width: 2
-            }
-          }
-        },
-        yAxis: {
-          name: "单位/天",
-          type: 'value',
-          nameLocation: "end",
-          nameTextStyle: {
-            color: '#BCE3FF',
-    				fontSize: '24',
-    				fontWeight: 'normal',
-    				align: 'left',
-    				padding: [0, 0, 30, 0]
-          },
-          max:'25',
           axisLine: {
             show: true,
             lineStyle: {
               color: '#889BAB',
-              width: 2
-            }
+              width: 2,
+            },
+          },
+        },
+        yAxis: {
+          name: '单位/天',
+          type: 'value',
+          nameLocation: 'end',
+          nameTextStyle: {
+            color: '#BCE3FF',
+            fontSize: '24',
+            fontWeight: 'normal',
+            align: 'left',
+            padding: [0, 0, 30, 0],
+          },
+          max: '25',
+          axisLine: {
+            show: true,
+            lineStyle: {
+              color: '#889BAB',
+              width: 2,
+            },
           },
           splitLine: {
             show: true,
             lineStyle: {
               color: '#3B4C5A',
-                type: 'dashed' // ! 网格虚线设置
-            }
-          },
-          axisLabel: {
-      			textStyle: {
-      				color: '#BCE3FF',
-      				fontWeight: 400,
-      				fontSize: '22',
-      				margin: 22
-      			},
-          },
-          position: 'left'
-        },
-        series: [{
-          name: '晴天',
-          type: 'bar',
-          barWidth: '12px',
-          itemStyle: {
-            normal: {
-                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                    offset: 0,
-                    color: '#FBC706'
-                }, {
-                    offset: 1,
-                    color: '#F5814C'
-                }]),
-                barBorderRadius: 12,
+              type: 'dashed', // ! 网格虚线设置
             },
           },
-          data: [19, 19, 20, 23, 15, 22, 23, 23]
+          axisLabel: {
+            textStyle: {
+              color: '#BCE3FF',
+              fontWeight: 400,
+              fontSize: '22',
+              margin: 22,
+            },
+          },
+          position: 'left',
         },
-        {
-          name: '阴天',
-          type: 'bar',
-          barWidth: '12px',
-          itemStyle: {
-            normal: {
-                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+        series: [
+          {
+            name: '晴天',
+            type: 'bar',
+            barWidth: '12px',
+            itemStyle: {
+              normal: {
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                  {
                     offset: 0,
-                    color: '#278CF7'
-                }, {
+                    color: '#FBC706',
+                  },
+                  {
                     offset: 1,
-                    color: '#6851F1'
-                }]),
+                    color: '#F5814C',
+                  },
+                ]),
+                barBorderRadius: 12,
+              },
+            },
+            data: [19, 19, 20, 23, 15, 22, 23, 23],
+          },
+          {
+            name: '阴天',
+            type: 'bar',
+            barWidth: '12px',
+            itemStyle: {
+              normal: {
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                  {
+                    offset: 0,
+                    color: '#278CF7',
+                  },
+                  {
+                    offset: 1,
+                    color: '#6851F1',
+                  },
+                ]),
                 barBorderRadius: 11,
-            }
-            
+              },
+            },
+            data: [15, 15, 13, 11, 15, 12, 11, 11],
           },
-          data: [15, 15, 13, 11, 15, 12, 11, 11]
-        },
-        {
-          name: '雨雪',
-          type: 'bar',
-          barWidth: '12px',
-          itemStyle: {
-            normal: {
-                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+          {
+            name: '雨雪',
+            type: 'bar',
+            barWidth: '12px',
+            itemStyle: {
+              normal: {
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                  {
                     offset: 0,
-                    color: '#89D470'
-                }, {
+                    color: '#89D470',
+                  },
+                  {
                     offset: 1,
-                    color: '#0FBCB6'
-                }]),
-            barBorderRadius: 11,
-            }
+                    color: '#0FBCB6',
+                  },
+                ]),
+                barBorderRadius: 11,
+              },
+            },
+            data: [0, 0, 0, 0, 3, 0, 0, 0],
           },
-          data: [0, 0, 0, 0, 3, 0, 0, 0]
-        },
-        {
-          name: '其他',
-          type: 'bar',
-          barWidth: '12px',
-          itemStyle: {
-            normal: {
-                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+          {
+            name: '其他',
+            type: 'bar',
+            barWidth: '12px',
+            itemStyle: {
+              normal: {
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                  {
                     offset: 0,
-                    color: '#FFADAA'
-                }, {
+                    color: '#FFADAA',
+                  },
+                  {
                     offset: 1,
-                    color: '#DD2E25'
-                }]),
-            barBorderRadius: 11,
-            }
+                    color: '#DD2E25',
+                  },
+                ]),
+                barBorderRadius: 11,
+              },
+            },
+            data: [0, 0, 0, 0, 0, 0, 0, 0],
           },
-          data: [0, 0, 0, 0, 0, 0, 0, 0]
-        }],
+        ],
       },
       chartCssStyle1: {
         width: 983,
@@ -696,7 +710,7 @@ export default {
           top: '15%',
           bottom: '15%', //也可设置left和right设置距离来控制图表的大小
           left: '13%',
-          right: '4%'
+          right: '4%',
         },
         legend: {
           data: ['短期预测功率'],
@@ -704,27 +718,38 @@ export default {
           top: 10,
           // icon: 'path://M1353.216 843.264H339.456c-185.856 0-337.92-152.064-337.92-337.92s152.064-337.92 337.92-337.92h1013.76c185.856 0 337.92 152.064 337.92 337.92s-152.064 337.92-337.92 337.92z',
           textStyle: {
-              color: "#BCE3FF",
-              fontSize: 22
+            color: '#BCE3FF',
+            fontSize: 22,
           },
           itemWidth: 49,
           itemHeight: 20,
           // itemGap: 35
         },
         tooltip: {
-            trigger: 'axis',
-            axisPointer: {
-              type: 'shadow',
-              label: {
-                show: false,
-              },
+          trigger: 'axis',
+          axisPointer: {
+            type: 'shadow',
+            label: {
+              show: false,
             },
-            textStyle: {
-              align: 'left',
-            },
+          },
+          textStyle: {
+            align: 'left',
+          },
         },
         xAxis: {
-          data: ['03-04 00:00', '03-04 01:00', '03-04 02:00', '03-04 03:00', '03-04 04:00', '03-04 05:00', '03-04 06:00', '03-04 07:00', '03-04 08:00', '03-04 09:00'],
+          data: [
+            '03-04 00:00',
+            '03-04 01:00',
+            '03-04 02:00',
+            '03-04 03:00',
+            '03-04 04:00',
+            '03-04 05:00',
+            '03-04 06:00',
+            '03-04 07:00',
+            '03-04 08:00',
+            '03-04 09:00',
+          ],
           interval: 0,
           offset: 35,
           axisLine: {
@@ -737,7 +762,7 @@ export default {
             show: true,
             textStyle: {
               color: '#BCE3FF', //X轴文字颜色
-              fontSize: '22'
+              fontSize: '22',
             },
           },
         },
@@ -745,20 +770,20 @@ export default {
           {
             type: 'value',
             name: '单位/kw',
-            nameLocation: "end",
+            nameLocation: 'end',
             nameTextStyle: {
               color: '#BCE3FF',
               fontSize: '24',
               fontWeight: 'normal',
               align: 'left',
-              padding: [0, 0, 20, 0]
+              padding: [0, 0, 20, 0],
             },
             splitLine: {
               show: true,
               lineStyle: {
                 color: '#3B4C5A',
-                type: 'dashed' // ! 网格虚线设置
-              }
+                type: 'dashed', // ! 网格虚线设置
+              },
             },
             max: 21000,
             scale: true,
@@ -767,16 +792,16 @@ export default {
               show: false,
             },
             axisLine: {
-              show: false
+              show: false,
             },
             axisLabel: {
               show: true,
               textStyle: {
                 color: '#BCE3FF',
-                fontSize: '22'
+                fontSize: '22',
               },
             },
-          }
+          },
         ],
         dataZoom: [
           {
@@ -839,7 +864,7 @@ export default {
               borderColor: '#FF4598',
               borderWidth: 1,
               shadowColor: '#FF4598',
-              shadowBlur: 10
+              shadowBlur: 10,
             },
             lineStyle: {
               width: 4,
@@ -852,7 +877,7 @@ export default {
             },
             z: 5,
             data: [0, 0, 18000, 0, 0, 18000, 0, 0, 17500, 0],
-          }
+          },
         ],
       },
       chartCssStyle2: {
@@ -867,7 +892,7 @@ export default {
           top: '15%',
           bottom: '15%', //也可设置left和right设置距离来控制图表的大小
           left: '13%',
-          right: '4%'
+          right: '4%',
         },
         legend: {
           data: ['短期准确率'],
@@ -875,8 +900,8 @@ export default {
           top: 15,
           // icon: 'path://M1353.216 843.264H339.456c-185.856 0-337.92-152.064-337.92-337.92s152.064-337.92 337.92-337.92h1013.76c185.856 0 337.92 152.064 337.92 337.92s-152.064 337.92-337.92 337.92z',
           textStyle: {
-            color: "#BCE3FF",
-            fontSize: 22
+            color: '#BCE3FF',
+            fontSize: 22,
           },
           itemWidth: 49,
           itemHeight: 20,
@@ -908,7 +933,7 @@ export default {
             show: true,
             textStyle: {
               color: '#BCE3FF', //X轴文字颜色
-              fontSize: '22'
+              fontSize: '22',
             },
           },
         },
@@ -916,20 +941,20 @@ export default {
           {
             type: 'value',
             name: '单位/kw',
-            nameLocation: "end",
+            nameLocation: 'end',
             nameTextStyle: {
               color: '#BCE3FF',
               fontSize: '24',
               fontWeight: 'normal',
               align: 'left',
-              padding: [0, 0, 20, 0]
+              padding: [0, 0, 20, 0],
             },
             splitLine: {
               show: true,
               lineStyle: {
                 color: '#3B4C5A',
-                type: 'dashed' // ! 网格虚线设置
-              }
+                type: 'dashed', // ! 网格虚线设置
+              },
             },
             max: 21000,
             min: 0,
@@ -939,16 +964,16 @@ export default {
               show: false,
             },
             axisLine: {
-              show: false
+              show: false,
             },
             axisLabel: {
               show: true,
               textStyle: {
                 color: '#BCE3FF',
-                fontSize: '22'
+                fontSize: '22',
               },
             },
-          }
+          },
         ],
         dataZoom: [
           {
@@ -960,10 +985,10 @@ export default {
             end: 100,
             handleSize: '110%',
             handleStyle: {
-                color: '#5B3AAE',
+              color: '#5B3AAE',
             },
             textStyle: {
-                color: 'rgba(204,187,225,0.5)',
+              color: 'rgba(204,187,225,0.5)',
             },
             fillerColor: 'rgba(67,55,160,0.4)',
             borderColor: 'rgba(204,187,225,0.5)',
@@ -1011,7 +1036,7 @@ export default {
               borderColor: '#FF803E',
               borderWidth: 1,
               shadowColor: '#FF803E',
-              shadowBlur: 10
+              shadowBlur: 10,
             },
             lineStyle: {
               width: 2,
@@ -1024,7 +1049,7 @@ export default {
             },
             z: 5,
             data: [10000, 11000, 15000, 14500, 17000, 13500, 4500, 12000],
-          }
+          },
         ],
       },
       chartCssStyle3: {
@@ -1034,73 +1059,77 @@ export default {
         left: 149,
       },
       chartOption3: {
-        backgroundColor:"transparent",
-        series: [{
-          name: "刻度文字",
-          type: "gauge",
-          radius: "80%",
-          center: ["50%", "55%"],
-          startAngle: 235,
-          endAngle: -55,
-          splitNumber: 10,
-          min: -50,
-          max: 100,
-          axisTick: {
-              show: false
-          },
-          axisLine: {
-            lineStyle: {
-              color: [[0.36, "#FDB302"], [1, "#1E1E1E"]],
-              width: 25,
-              opacity: 0.9
-            }
-          },
-          splitLine: {
-            show: false
-          },
-          axisLabel: {
-            show: true,
-            distance: -70,
-            fontSize: 22,
-            color: '#9F9584',
-          },
-          detail: {
-            show: false
-          },
-          pointer: {
+        backgroundColor: 'transparent',
+        series: [
+          {
+            name: '刻度文字',
+            type: 'gauge',
+            radius: '80%',
+            center: ['50%', '55%'],
+            startAngle: 235,
+            endAngle: -55,
+            splitNumber: 10,
+            min: -50,
+            max: 100,
+            axisTick: {
+              show: false,
+            },
+            axisLine: {
+              lineStyle: {
+                color: [
+                  [0.36, '#FDB302'],
+                  [1, '#1E1E1E'],
+                ],
+                width: 25,
+                opacity: 0.9,
+              },
+            },
+            splitLine: {
+              show: false,
+            },
+            axisLabel: {
+              show: true,
+              distance: -70,
+              fontSize: 22,
+              color: '#9F9584',
+            },
+            detail: {
+              show: false,
+            },
+            pointer: {
               show: true,
               showAbove: false,
               width: 8,
-              length: "70%",
+              length: '70%',
               itemStyle: {
-                color: new echarts.graphic.LinearGradient(
-                  0, 0, 0, 1, [{
-                      offset: 0,
-                      color: '#E2CE67',
-                    },
-                    {
-                      offset: 1,
-                      color: '#D9A157',
-                    }
-                  ]
-                )
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                  {
+                    offset: 0,
+                    color: '#E2CE67',
+                  },
+                  {
+                    offset: 1,
+                    color: '#D9A157',
+                  },
+                ]),
               },
-          },
-          markPoint: {
-            symbol:'circle',
-            symbolSize:5,
-            itemStyle: {
-              color: "#432f0d"
             },
-            data: [
-              {
-                x: "50%",
-                y: "55%",
-              }
-            ],
+            markPoint: {
+              symbol: 'circle',
+              symbolSize: 5,
+              itemStyle: {
+                color: '#432f0d',
+              },
+              data: [
+                {
+                  x: '50%',
+                  y: '55%',
+                },
+              ],
+            },
+            data: [4],
           },
-          data: [4]
-        }]
+        ],
       },
       chartCssStyle4: {
         width: 400,
@@ -1109,120 +1138,128 @@ export default {
         left: 612,
       },
       chartOption4: {
-        backgroundColor:"transparent",
+        backgroundColor: 'transparent',
         series: [
           {
-            name: "小指针",
-            type: "gauge",
-            radius: "80%",
-            center: ["50%", "55%"],
+            name: '小指针',
+            type: 'gauge',
+            radius: '80%',
+            center: ['50%', '55%'],
             startAngle: 235,
             endAngle: -55,
             splitNumber: 10,
             min: 0,
             max: 100,
             axisTick: {
-              show: false
+              show: false,
             },
             axisLine: {
               lineStyle: {
-                color: [[1, new echarts.graphic.LinearGradient(
-                  0, 0, 0, 1, [{
-                      offset: 0,
-                      color: '#FF8784',
-                    },
-                    {
-                      offset: 1,
-                      color: '#F90D00',
-                    }
-                  ]
-                )]],
+                color: [
+                  [
+                    1,
+                    new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                      {
+                        offset: 0,
+                        color: '#FF8784',
+                      },
+                      {
+                        offset: 1,
+                        color: '#F90D00',
+                      },
+                    ]),
+                  ],
+                ],
                 width: 25,
-                opacity: 0.9
-              }
+                opacity: 0.9,
+              },
             },
             splitLine: {
-              show: false
+              show: false,
             },
             axisLabel: {
               show: false,
             },
             detail: {
-              show: false
+              show: false,
             },
             pointer: {
               show: true,
               showAbove: false,
               width: 8,
-              length: "35%",
+              length: '35%',
             },
-            data: [35]
-        },{
-          name: "刻度文字",
-          type: "gauge",
-          radius: "80%",
-          center: ["50%", "55%"],
-          startAngle: 235,
-          endAngle: -55,
-          splitNumber: 10,
-          min: 0,
-          max: 100,
-          axisTick: {
-            show: false
+            data: [35],
           },
-          axisLine: {
-            lineStyle: {
-              color: [[0.65, "#00D8F9"], [1, "#1E1E1E"]],
-              width: 25,
-              opacity: 0.9
-            }
-          },
-          splitLine: {
-            show: false
-          },
-          axisLabel: {
-            show: true,
-            distance: -70,
-            fontSize: 22,
-            color: '#9F9584',
-          },
-          detail: {
-            show: false
-          },
-          pointer: {
-            show: true,
-            showAbove: false,
-            width: 8,
-            length: "70%",
-            itemStyle: {
-              color: new echarts.graphic.LinearGradient(
-                0, 0, 0, 1, [{
+          {
+            name: '刻度文字',
+            type: 'gauge',
+            radius: '80%',
+            center: ['50%', '55%'],
+            startAngle: 235,
+            endAngle: -55,
+            splitNumber: 10,
+            min: 0,
+            max: 100,
+            axisTick: {
+              show: false,
+            },
+            axisLine: {
+              lineStyle: {
+                color: [
+                  [0.65, '#00D8F9'],
+                  [1, '#1E1E1E'],
+                ],
+                width: 25,
+                opacity: 0.9,
+              },
+            },
+            splitLine: {
+              show: false,
+            },
+            axisLabel: {
+              show: true,
+              distance: -70,
+              fontSize: 22,
+              color: '#9F9584',
+            },
+            detail: {
+              show: false,
+            },
+            pointer: {
+              show: true,
+              showAbove: false,
+              width: 8,
+              length: '70%',
+              itemStyle: {
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                  {
                     offset: 0,
                     color: '#022B2E',
                   },
                   {
                     offset: 1,
                     color: '#00D8F9',
-                  }
-                ]
-              )
+                  },
+                ]),
+              },
             },
-          },
-          markPoint: {
-            symbol:'circle',
-            symbolSize:5,
-            itemStyle: {
-              color: "#033742"
+            markPoint: {
+              symbol: 'circle',
+              symbolSize: 5,
+              itemStyle: {
+                color: '#033742',
+              },
+              data: [
+                {
+                  x: '50%',
+                  y: '55%',
+                },
+              ],
             },
-            data: [
-              {
-                x: "50%",
-                y: "55%",
-              }
-            ],
+            data: [65],
           },
-          data: [65]
-        }]
+        ],
       },
     };
   },
@@ -1302,16 +1339,16 @@ export default {
       width: 24px;
       background-color: #182846;
     }
-    
+
     /* 设置滚动条滑块的样式 */
     .prediction::-webkit-scrollbar-thumb {
-      background-color: #2B416C;
+      background-color: #2b416c;
       border-radius: 12px;
     }
-    
+
     /* 设置滚动条滑块的hover状态样式 */
     .prediction::-webkit-scrollbar-thumb:hover {
-      background-color: #2B416C;
+      background-color: #2b416c;
     }
     .left_image {
       width: 151px;
