@@ -3,8 +3,8 @@
     <div class="devopsBigScreen">
       <div :style="bigScreenStyle">
         <!-- 返回 -->
-        <img src="/assets/images/back.png" alt="" class="back_image" @click="$router.back()" />
-        <img src="/assets/images/next.png" alt="" class="over_image" @click="$router.push({ path: '/weather' })" />
+        <img src="assets/images/back.png" alt="" class="back_image" @click="$router.back()" />
+        <img src="assets/images/next.png" alt="" class="over_image" @click="$router.push({ path: '/database' })" />
         <!-- 静态文本 -->
         <customText v-for="(item, index) in textList" :options="item" :key="'customText' + index"></customText>
         <div class="prediction">

@@ -37,7 +37,7 @@ export default {
   methods: {
     toEntrance() {
       this.$router.push({
-        path: '/weatherForecast',
+        path: '/scene',
       });
     },
     // 窗口变化

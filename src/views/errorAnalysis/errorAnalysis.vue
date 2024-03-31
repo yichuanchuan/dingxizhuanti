@@ -3,27 +3,42 @@
     <div class="devopsBigScreen">
       <div :style="bigScreenStyle">
         <!-- 返回 -->
-        <img src="/assets/images/back.png" alt="" class="back_image" @click="$router.back()" />
-        <img src="/assets/images/next.png" alt="" class="over_image" @click="$router.push({path: '/patent'})" />
+        <img src="assets/images/back.png" alt="" class="back_image" @click="$router.back()" />
+        <img src="assets/images/next.png" alt="" class="over_image" @click="$router.push({ path: '/patent' })" />
         <!-- 静态文本 -->
         <customText v-for="(item, index) in textList" :options="item" :key="'customText' + index"></customText>
         <!-- 右下角echarts -->
         <commonCharts :option="chartOption" :chartIndex="0" :cssStyle="chartCssStyle"></commonCharts>
         <!-- 表格1 -->
         <div class="prediction prediction1">
-          <div class="prediction_item" v-for="(item, index) in predictionList1" :key="index" :style="{borderBottom: `${(index == predictionList1.length - 1) ? '' : '1px solid #3F5B6F'}`}">
+          <div
+            class="prediction_item"
+            v-for="(item, index) in predictionList1"
+            :key="index"
+            :style="{ borderBottom: `${index == predictionList1.length - 1 ? '' : '1px solid #3F5B6F'}` }"
+          >
             <div class="prediction_item_text" v-for="(it, idx) in item" :key="idx" :style="it">{{ it.text }}</div>
           </div>
         </div>
         <!-- 表格2 -->
         <div class="prediction prediction2">
-          <div class="prediction_item" v-for="(item, index) in predictionList2" :key="index" :style="{borderBottom: `${(index == predictionList2.length - 1) ? '' : '1px solid #3F5B6F'}`}">
+          <div
+            class="prediction_item"
+            v-for="(item, index) in predictionList2"
+            :key="index"
+            :style="{ borderBottom: `${index == predictionList2.length - 1 ? '' : '1px solid #3F5B6F'}` }"
+          >
             <div class="prediction_item_text" v-for="(it, idx) in item" :key="idx" :style="it">{{ it.text }}</div>
           </div>
         </div>
         <!-- 表格3 -->
         <div class="prediction prediction3">
-          <div class="prediction_item" v-for="(item, index) in predictionList3" :key="index" :style="{borderBottom: `${(index == predictionList3.length - 1) ? '' : '1px solid #3F5B6F'}`}">
+          <div
+            class="prediction_item"
+            v-for="(item, index) in predictionList3"
+            :key="index"
+            :style="{ borderBottom: `${index == predictionList3.length - 1 ? '' : '1px solid #3F5B6F'}` }"
+          >
             <div class="prediction_item_text" v-for="(it, idx) in item" :key="idx" :style="it">{{ it.text }}</div>
           </div>
         </div>
@@ -64,7 +79,7 @@ export default {
           width: 987,
           left: 2591,
           top: 469,
-          lineHeight: 73
+          lineHeight: 73,
         },
         {
           text: '全面梳理影响负荷的各类关键影响因素以及关联关系,研究适用于定西电网分类负荷的分析及预测方法，持续提高电网负荷分析预测的效率和准确率。',
@@ -76,7 +91,7 @@ export default {
           width: 991,
           left: 2587,
           top: 857,
-          lineHeight: 73
+          lineHeight: 73,
         },
       ],
       chartCssStyle: {
@@ -91,7 +106,7 @@ export default {
           top: '5%',
           bottom: '15%', //也可设置left和right设置距离来控制图表的大小
           left: '4%',
-          right: '4%'
+          right: '4%',
         },
         tooltip: {
           trigger: 'axis',
@@ -106,12 +121,31 @@ export default {
           },
         },
         xAxis: {
-          data: ['03-03 00:00', '03-03 01:00', '03-03 02:00', '03-03 03:00',
-          '03-03 04:00', '03-03 05:00', '03-03 06:00', '03-03 07:00',
-          '03-03 08:00', '03-03 09:00', '03-03 10:00', '03-03 11:00',
-          '03-03 12:00', '03-03 13:00', '03-03 14:00', '03-03 15:00',
-          '03-03 16:00', '03-03 17:00', '03-03 18:00', '03-03 19:00',
-          '03-03 20:00', '03-03 21:00', '03-03 22:00'],
+          data: [
+            '03-03 00:00',
+            '03-03 01:00',
+            '03-03 02:00',
+            '03-03 03:00',
+            '03-03 04:00',
+            '03-03 05:00',
+            '03-03 06:00',
+            '03-03 07:00',
+            '03-03 08:00',
+            '03-03 09:00',
+            '03-03 10:00',
+            '03-03 11:00',
+            '03-03 12:00',
+            '03-03 13:00',
+            '03-03 14:00',
+            '03-03 15:00',
+            '03-03 16:00',
+            '03-03 17:00',
+            '03-03 18:00',
+            '03-03 19:00',
+            '03-03 20:00',
+            '03-03 21:00',
+            '03-03 22:00',
+          ],
           interval: 0,
           offset: 15,
           axisLine: {
@@ -124,7 +158,7 @@ export default {
             show: true,
             textStyle: {
               color: '#BCE3FF', //X轴文字颜色
-              fontSize: '22'
+              fontSize: '22',
             },
           },
         },
@@ -135,8 +169,8 @@ export default {
               show: true,
               lineStyle: {
                 color: 'rgba(59, 76, 90, 1)',
-                type: 'dashed' // ! 网格虚线设置
-              }
+                type: 'dashed', // ! 网格虚线设置
+              },
             },
             max: 90,
             min: 60,
@@ -146,16 +180,16 @@ export default {
               show: false,
             },
             axisLine: {
-              show: false
+              show: false,
             },
             axisLabel: {
               show: true,
               textStyle: {
                 color: '#BCE3FF',
-                fontSize: '22'
+                fontSize: '22',
               },
             },
-          }
+          },
         ],
         series: [
           {
@@ -167,14 +201,17 @@ export default {
             symbolSize: 14, //标记的大小
             // showSymbol: false,
             areaStyle: {
-              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                offset: 0,
-                color: 'rgba(0, 217, 192, 0.28)'
-              }, {
-                offset: 1,
-                color: 'rgba(0, 217, 193, 0)'
-              }]),
-              origin: "start"
+              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                {
+                  offset: 0,
+                  color: 'rgba(0, 217, 192, 0.28)',
+                },
+                {
+                  offset: 1,
+                  color: 'rgba(0, 217, 193, 0)',
+                },
+              ]),
+              origin: 'start',
             },
             itemStyle: {
               //折线拐点标志的样式
@@ -214,9 +251,8 @@ export default {
               opacity: 0.8,
             },
             z: 5,
-            data: [90, 90, 90, 90, 90, 90, 90, 90, 87, 87, 87, 87, 87, 87.5,
-            88, 88, 87.5, 87.5, 87.5, 87.5, 90, 90, 90],
-          }
+            data: [90, 90, 90, 90, 90, 90, 90, 90, 87, 87, 87, 87, 87, 87.5, 88, 88, 87.5, 87.5, 87.5, 87.5, 90, 90, 90],
+          },
         ],
       },
       predictionList1: [
@@ -226,7 +262,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '224px'
+            width: '224px',
           },
           {
             text: '00:00',
@@ -234,7 +270,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '01:00',
@@ -242,7 +278,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '02:00',
@@ -250,7 +286,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '03:00',
@@ -258,7 +294,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '04:00',
@@ -266,7 +302,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '05:00',
@@ -274,7 +310,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '233px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '06:00',
@@ -282,7 +318,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '07:00',
@@ -290,7 +326,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '214px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
         ],
         [
@@ -299,7 +335,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '224px'
+            width: '224px',
           },
           {
             text: '5.65',
@@ -307,7 +343,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '8.52',
@@ -315,7 +351,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '9.85',
@@ -323,7 +359,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '5.86',
@@ -331,7 +367,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '3.05',
@@ -339,7 +375,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '1.55',
@@ -347,7 +383,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '233px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '8.95',
@@ -355,7 +391,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '7.26',
@@ -363,7 +399,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '214px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
         ],
         [
@@ -372,7 +408,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '224px'
+            width: '224px',
           },
           {
             text: '6.31',
@@ -380,7 +416,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '7.74',
@@ -388,7 +424,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '8.57',
@@ -396,7 +432,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '6.56',
@@ -404,7 +440,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '3.13',
@@ -412,7 +448,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '1.01',
@@ -420,7 +456,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '233px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '6.34',
@@ -428,7 +464,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '8.38',
@@ -436,7 +472,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '214px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
         ],
         [
@@ -445,7 +481,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '224px'
+            width: '224px',
           },
           {
             text: '96.98',
@@ -453,7 +489,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '97.42',
@@ -461,7 +497,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '96.85',
@@ -469,7 +505,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '97.72',
@@ -477,7 +513,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '98.11',
@@ -485,7 +521,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '96.68',
@@ -493,7 +529,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '233px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '97.08',
@@ -501,7 +537,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '97.16',
@@ -509,9 +545,9 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '214px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
-        ]
+        ],
       ],
       predictionList2: [
         [
@@ -520,7 +556,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '224px'
+            width: '224px',
           },
           {
             text: '08:00',
@@ -528,7 +564,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '09:00',
@@ -536,7 +572,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '10:00',
@@ -544,7 +580,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '11:00',
@@ -552,7 +588,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '12:00',
@@ -560,7 +596,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '13:00',
@@ -568,7 +604,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '233px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '14:00',
@@ -576,7 +612,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '15:00',
@@ -584,7 +620,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '214px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
         ],
         [
@@ -593,7 +629,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '224px'
+            width: '224px',
           },
           {
             text: '176.39',
@@ -601,7 +637,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '1361.66',
@@ -609,7 +645,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '3335.44',
@@ -617,7 +653,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '5613.32',
@@ -625,7 +661,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '8042.18',
@@ -633,7 +669,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '9464.23',
@@ -641,7 +677,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '233px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '10838.25',
@@ -649,7 +685,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '9337.31',
@@ -657,7 +693,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '214px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
         ],
         [
@@ -666,7 +702,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '224px'
+            width: '224px',
           },
           {
             text: '247',
@@ -674,7 +710,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '1756.03',
@@ -682,7 +718,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '4224.58',
@@ -690,7 +726,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '6000.53',
@@ -698,7 +734,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '8050.59',
@@ -706,7 +742,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '9416.77',
@@ -714,7 +750,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '233px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '10936.51',
@@ -722,7 +758,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '9512.82',
@@ -730,7 +766,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '214px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
         ],
         [
@@ -739,7 +775,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '224px'
+            width: '224px',
           },
           {
             text: '74.16',
@@ -747,7 +783,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '74.29',
@@ -755,7 +791,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '72.07',
@@ -763,7 +799,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '77.43',
@@ -771,7 +807,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '78.21',
@@ -779,7 +815,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '83.41',
@@ -787,7 +823,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '233px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '85.01',
@@ -795,7 +831,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '88.86',
@@ -803,9 +839,9 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '214px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
-        ]
+        ],
       ],
       predictionList3: [
         [
@@ -814,7 +850,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '224px'
+            width: '224px',
           },
           {
             text: '16:00',
@@ -822,7 +858,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '17:00',
@@ -830,7 +866,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '18:00',
@@ -838,7 +874,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '19:00',
@@ -846,7 +882,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '20:00',
@@ -854,7 +890,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '21:00',
@@ -862,7 +898,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '233px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '22:00',
@@ -870,7 +906,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '23:00',
@@ -878,7 +914,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '214px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
         ],
         [
@@ -887,7 +923,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '224px'
+            width: '224px',
           },
           {
             text: '4723.56',
@@ -895,7 +931,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '2005.61',
@@ -903,7 +939,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '712.72',
@@ -911,7 +947,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '11.44',
@@ -919,7 +955,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '7.01',
@@ -927,7 +963,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '7.03',
@@ -935,7 +971,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '233px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '3.7',
@@ -943,7 +979,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '4.03',
@@ -951,7 +987,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '214px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
         ],
         [
@@ -960,7 +996,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '224px'
+            width: '224px',
           },
           {
             text: '4482.32',
@@ -968,7 +1004,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '2519.53',
@@ -976,7 +1012,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '670.41',
@@ -984,7 +1020,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '10.16',
@@ -992,7 +1028,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '6.59',
@@ -1000,7 +1036,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '6.13',
@@ -1008,7 +1044,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '233px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '6.19',
@@ -1016,7 +1052,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '5.84',
@@ -1024,7 +1060,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '214px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
         ],
         [
@@ -1033,7 +1069,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '224px'
+            width: '224px',
           },
           {
             text: '84.5',
@@ -1041,7 +1077,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '81.97',
@@ -1049,7 +1085,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '82.28',
@@ -1057,7 +1093,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '84.57',
@@ -1065,7 +1101,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '234px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '96.0',
@@ -1073,7 +1109,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '96.19',
@@ -1081,7 +1117,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '233px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '96.1',
@@ -1089,7 +1125,7 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '231px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
           {
             text: '96.73',
@@ -1097,10 +1133,10 @@ export default {
             color: '#A4B3CD',
             fontWeight: 500,
             width: '214px',
-            borderLeft: '1px solid #3F5B6F'
+            borderLeft: '1px solid #3F5B6F',
           },
-        ]
-      ]
+        ],
+      ],
     };
   },
   methods: {

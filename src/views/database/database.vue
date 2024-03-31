@@ -3,13 +3,18 @@
     <div class="devopsBigScreen">
       <div :style="bigScreenStyle">
         <!-- 返回 -->
-        <img src="/assets/images/back.png" alt="" class="back_image" @click="$router.back()" />
-        <img src="/assets/images/next.png" alt="" class="over_image" @click="$router.push({path: '/errorAnalysis'})" />
+        <img src="assets/images/back.png" alt="" class="back_image" @click="$router.back()" />
+        <img src="assets/images/next.png" alt="" class="over_image" @click="$router.push({ path: '/weather' })" />
         <!-- 静态文本 -->
         <customText v-for="(item, index) in textList" :options="item" :key="'customText' + index"></customText>
         <!-- 表格 -->
         <div class="prediction">
-          <div class="prediction_item" v-for="(item, index) in predictionList" :key="index" :style="{borderBottom: `${(index == predictionList.length - 1) ? '' : '1px solid #3F5B6F'}`}">
+          <div
+            class="prediction_item"
+            v-for="(item, index) in predictionList"
+            :key="index"
+            :style="{ borderBottom: `${index == predictionList.length - 1 ? '' : '1px solid #3F5B6F'}` }"
+          >
             <div class="prediction_item_text" v-for="(it, idx) in item" :key="idx" :style="it">{{ it.text }}</div>
           </div>
         </div>
@@ -51,7 +56,7 @@ export default {
           left: 824,
           top: 581,
           letterSpacing: 10,
-          lineHeight: 130
+          lineHeight: 130,
         },
         {
           text: 'XGBOOST',
@@ -193,7 +198,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '180px'
+            width: '180px',
           },
           {
             text: '线路名称',
@@ -201,7 +206,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '177px'
+            width: '177px',
           },
           {
             text: '站点名称',
@@ -209,7 +214,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '144px'
+            width: '144px',
           },
           {
             text: '接入电压 等级(v)',
@@ -217,7 +222,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '125px'
+            width: '125px',
           },
           {
             text: '装机 容量(kW)',
@@ -225,7 +230,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '143px'
+            width: '143px',
           },
           {
             text: '并网变电站 及10kv线路',
@@ -234,7 +239,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '140px',
-            padding: '0 70px'
+            padding: '0 70px',
           },
           {
             text: '并网点',
@@ -242,7 +247,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '173px'
+            width: '173px',
           },
           {
             text: '是否为 村级电站',
@@ -251,7 +256,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 15px'
+            padding: '0 15px',
           },
           {
             text: '是否为 扶贫电站',
@@ -260,7 +265,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 30px'
+            padding: '0 30px',
           },
           {
             text: '状态',
@@ -268,7 +273,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '115px'
+            width: '115px',
           },
         ],
         [
@@ -277,7 +282,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '180px'
+            width: '180px',
           },
           {
             text: '35kv宁远变 115…',
@@ -285,7 +290,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '177px'
+            width: '177px',
           },
           {
             text: '黄金胜',
@@ -293,7 +298,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '144px'
+            width: '144px',
           },
           {
             text: '220v',
@@ -301,7 +306,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '125px'
+            width: '125px',
           },
           {
             text: '3',
@@ -309,7 +314,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '143px'
+            width: '143px',
           },
           {
             text: '35kv宁远变35kv……',
@@ -317,7 +322,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '280px'
+            width: '280px',
           },
           {
             text: '35kv宁远变 115…',
@@ -325,7 +330,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '173px'
+            width: '173px',
           },
           {
             text: '否',
@@ -334,7 +339,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 15px'
+            padding: '0 15px',
           },
           {
             text: '是',
@@ -343,7 +348,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 30px'
+            padding: '0 30px',
           },
           {
             text: '已投运',
@@ -351,7 +356,7 @@ export default {
             color: '#A6B74F',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '115px'
+            width: '115px',
           },
         ],
         [
@@ -360,7 +365,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '180px'
+            width: '180px',
           },
           {
             text: '35kv鲁家沟变 115……',
@@ -368,7 +373,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '177px'
+            width: '177px',
           },
           {
             text: '黄磐华',
@@ -376,7 +381,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '144px'
+            width: '144px',
           },
           {
             text: '220v',
@@ -384,7 +389,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '125px'
+            width: '125px',
           },
           {
             text: '3',
@@ -392,7 +397,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '143px'
+            width: '143px',
           },
           {
             text: '35kv鲁家沟变35……',
@@ -400,7 +405,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '280px'
+            width: '280px',
           },
           {
             text: '35kv鲁家沟变 115……',
@@ -408,7 +413,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '173px'
+            width: '173px',
           },
           {
             text: '否',
@@ -417,7 +422,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 15px'
+            padding: '0 15px',
           },
           {
             text: '是',
@@ -426,7 +431,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 30px'
+            padding: '0 30px',
           },
           {
             text: '已投运',
@@ -434,7 +439,7 @@ export default {
             color: '#A6B74F',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '115px'
+            width: '115px',
           },
         ],
         [
@@ -443,7 +448,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '180px'
+            width: '180px',
           },
           {
             text: '35kv宁远变 115…',
@@ -451,7 +456,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '177px'
+            width: '177px',
           },
           {
             text: '黄建成',
@@ -459,7 +464,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '144px'
+            width: '144px',
           },
           {
             text: '220v',
@@ -467,7 +472,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '125px'
+            width: '125px',
           },
           {
             text: '3',
@@ -475,7 +480,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '143px'
+            width: '143px',
           },
           {
             text: '35kv宁远变35kv……',
@@ -483,7 +488,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '280px'
+            width: '280px',
           },
           {
             text: '35kv宁远变 115…',
@@ -491,7 +496,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '173px'
+            width: '173px',
           },
           {
             text: '否',
@@ -500,7 +505,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 15px'
+            padding: '0 15px',
           },
           {
             text: '是',
@@ -509,7 +514,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 30px'
+            padding: '0 30px',
           },
           {
             text: '已投运',
@@ -517,7 +522,7 @@ export default {
             color: '#A6B74F',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '115px'
+            width: '115px',
           },
         ],
         [
@@ -526,7 +531,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '180px'
+            width: '180px',
           },
           {
             text: '35kv宁远变 115…',
@@ -534,7 +539,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '177px'
+            width: '177px',
           },
           {
             text: '黄世雄',
@@ -542,7 +547,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '144px'
+            width: '144px',
           },
           {
             text: '220v',
@@ -550,7 +555,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '125px'
+            width: '125px',
           },
           {
             text: '3',
@@ -558,7 +563,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '143px'
+            width: '143px',
           },
           {
             text: '35kv宁远变35kv……',
@@ -566,7 +571,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '280px'
+            width: '280px',
           },
           {
             text: '35kv宁远变 115…',
@@ -574,7 +579,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '173px'
+            width: '173px',
           },
           {
             text: '否',
@@ -583,7 +588,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 15px'
+            padding: '0 15px',
           },
           {
             text: '是',
@@ -592,7 +597,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 30px'
+            padding: '0 30px',
           },
           {
             text: '已投运',
@@ -600,7 +605,7 @@ export default {
             color: '#A6B74F',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '115px'
+            width: '115px',
           },
         ],
         [
@@ -609,7 +614,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '180px'
+            width: '180px',
           },
           {
             text: '35kv鲁家沟变 115……',
@@ -617,7 +622,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '177px'
+            width: '177px',
           },
           {
             text: '麻玉和',
@@ -625,7 +630,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '144px'
+            width: '144px',
           },
           {
             text: '220v',
@@ -633,7 +638,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '125px'
+            width: '125px',
           },
           {
             text: '3',
@@ -641,7 +646,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '143px'
+            width: '143px',
           },
           {
             text: '35kv鲁家沟变35……',
@@ -649,7 +654,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '280px'
+            width: '280px',
           },
           {
             text: '35kv鲁家沟变 115……',
@@ -657,7 +662,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '173px'
+            width: '173px',
           },
           {
             text: '否',
@@ -666,7 +671,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 15px'
+            padding: '0 15px',
           },
           {
             text: '是',
@@ -675,7 +680,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 30px'
+            padding: '0 30px',
           },
           {
             text: '已投运',
@@ -683,7 +688,7 @@ export default {
             color: '#A6B74F',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '115px'
+            width: '115px',
           },
         ],
         [
@@ -692,7 +697,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '180px'
+            width: '180px',
           },
           {
             text: '35kv鲁家沟变 115……',
@@ -700,7 +705,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '177px'
+            width: '177px',
           },
           {
             text: '麻润成',
@@ -708,7 +713,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '144px'
+            width: '144px',
           },
           {
             text: '220v',
@@ -716,7 +721,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '125px'
+            width: '125px',
           },
           {
             text: '3',
@@ -724,7 +729,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '143px'
+            width: '143px',
           },
           {
             text: '35kv鲁家沟变35……',
@@ -732,7 +737,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '280px'
+            width: '280px',
           },
           {
             text: '35kv鲁家沟变 115……',
@@ -740,7 +745,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '173px'
+            width: '173px',
           },
           {
             text: '否',
@@ -749,7 +754,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 15px'
+            padding: '0 15px',
           },
           {
             text: '是',
@@ -758,7 +763,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 30px'
+            padding: '0 30px',
           },
           {
             text: '已投运',
@@ -766,7 +771,7 @@ export default {
             color: '#A6B74F',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '115px'
+            width: '115px',
           },
         ],
         [
@@ -775,7 +780,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '180px'
+            width: '180px',
           },
           {
             text: '35kv鲁家沟变 115……',
@@ -783,7 +788,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '177px'
+            width: '177px',
           },
           {
             text: '麻守远',
@@ -791,7 +796,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '144px'
+            width: '144px',
           },
           {
             text: '220v',
@@ -799,7 +804,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '125px'
+            width: '125px',
           },
           {
             text: '3',
@@ -807,7 +812,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '143px'
+            width: '143px',
           },
           {
             text: '35kv鲁家沟变35……',
@@ -815,7 +820,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '280px'
+            width: '280px',
           },
           {
             text: '35kv鲁家沟变 115……',
@@ -823,7 +828,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '173px'
+            width: '173px',
           },
           {
             text: '否',
@@ -832,7 +837,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 15px'
+            padding: '0 15px',
           },
           {
             text: '是',
@@ -841,7 +846,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 30px'
+            padding: '0 30px',
           },
           {
             text: '已投运',
@@ -849,7 +854,7 @@ export default {
             color: '#A6B74F',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '115px'
+            width: '115px',
           },
         ],
         [
@@ -858,7 +863,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '180px'
+            width: '180px',
           },
           {
             text: '35kv鲁家沟变 115……',
@@ -866,7 +871,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '177px'
+            width: '177px',
           },
           {
             text: '麻守军',
@@ -874,7 +879,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '144px'
+            width: '144px',
           },
           {
             text: '220v',
@@ -882,7 +887,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '125px'
+            width: '125px',
           },
           {
             text: '3',
@@ -890,7 +895,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '143px'
+            width: '143px',
           },
           {
             text: '35kv鲁家沟变35……',
@@ -898,7 +903,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '280px'
+            width: '280px',
           },
           {
             text: '35kv鲁家沟变 115……',
@@ -906,7 +911,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '173px'
+            width: '173px',
           },
           {
             text: '否',
@@ -915,7 +920,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 15px'
+            padding: '0 15px',
           },
           {
             text: '是',
@@ -924,7 +929,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 30px'
+            padding: '0 30px',
           },
           {
             text: '已投运',
@@ -932,7 +937,7 @@ export default {
             color: '#A6B74F',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '115px'
+            width: '115px',
           },
         ],
         [
@@ -941,7 +946,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '180px'
+            width: '180px',
           },
           {
             text: '110kv西郊变 122……',
@@ -949,7 +954,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '177px'
+            width: '177px',
           },
           {
             text: '鲍菊萍',
@@ -957,7 +962,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '144px'
+            width: '144px',
           },
           {
             text: '220v',
@@ -965,7 +970,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '125px'
+            width: '125px',
           },
           {
             text: '4',
@@ -973,7 +978,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '143px'
+            width: '143px',
           },
           {
             text: '110kv西郊变110……',
@@ -981,7 +986,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '280px'
+            width: '280px',
           },
           {
             text: '110kv西郊变 122……',
@@ -989,7 +994,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '173px'
+            width: '173px',
           },
           {
             text: '否',
@@ -998,7 +1003,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 15px'
+            padding: '0 15px',
           },
           {
             text: '否',
@@ -1007,7 +1012,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 30px'
+            padding: '0 30px',
           },
           {
             text: '已投运',
@@ -1015,7 +1020,7 @@ export default {
             color: '#A6B74F',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '115px'
+            width: '115px',
           },
         ],
         [
@@ -1024,7 +1029,7 @@ export default {
             fontSize: '24px',
             color: '#A4B3CD',
             fontWeight: 500,
-            width: '180px'
+            width: '180px',
           },
           {
             text: '35kv鲁家沟变 115……',
@@ -1032,7 +1037,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '177px'
+            width: '177px',
           },
           {
             text: '魏英',
@@ -1040,7 +1045,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '144px'
+            width: '144px',
           },
           {
             text: '220v',
@@ -1048,7 +1053,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '125px'
+            width: '125px',
           },
           {
             text: '3',
@@ -1056,7 +1061,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '143px'
+            width: '143px',
           },
           {
             text: '35kv鲁家沟变35……',
@@ -1064,7 +1069,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '280px'
+            width: '280px',
           },
           {
             text: '35kv鲁家沟变 115……',
@@ -1072,7 +1077,7 @@ export default {
             color: '#A4B3CD',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '173px'
+            width: '173px',
           },
           {
             text: '否',
@@ -1081,7 +1086,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 15px'
+            padding: '0 15px',
           },
           {
             text: '是',
@@ -1090,7 +1095,7 @@ export default {
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
             width: '100px',
-            padding: '0 30px'
+            padding: '0 30px',
           },
           {
             text: '已投运',
@@ -1098,10 +1103,10 @@ export default {
             color: '#A6B74F',
             borderLeft: '1px solid #3F5B6F',
             fontWeight: 500,
-            width: '115px'
+            width: '115px',
           },
         ],
-      ]
+      ],
     };
   },
   methods: {
