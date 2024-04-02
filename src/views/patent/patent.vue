@@ -19,7 +19,7 @@
         <div class="left_image5"></div>
         <!-- 左侧文本 -->
         <div class="left_text">
-          <div>发明专利<span class="color_text">3项</span>、发表<span class="color_text">EI论文1篇</span></div>
+          <div>发明专利<span class="color_text">3项</span>、发表<span class="color_text">论文3篇</span></div>
           <div>在新华网、公司门户等发表<span class="color_text">新闻报道3篇</span></div>
           <div>2023年度甘肃省优秀质量管理小组<span class="color_text">二等奖</span></div>
           <div>国网甘肃省电力公司2023年大数据应用优秀成果集</div>

@@ -88,6 +88,18 @@ export default {
           top: '16%',
           containLabel: true,
         },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'shadow',
+            label: {
+              show: false,
+            },
+          },
+          textStyle: {
+            align: 'left',
+          },
+        },
         legend: {
           data: ['预测功率', '实际功率'],
           // right: 10,
@@ -179,7 +191,7 @@ export default {
         series: [
           {
             name: '实际功率',
-            data: [0, 0, 2800, 0, 0, 1580, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            data: [0, 0, 0, 2600, 0.15, 0.44, 1068.29, 80.74, 0, 2400, 0, 0, 0, 2200, 0, 0, 0, 2400, 0, 0],
             type: 'line',
             smooth: true, // 可选，平滑线
             symbol: 'none',
@@ -192,7 +204,7 @@ export default {
           },
           {
             name: '预测功率',
-            data: [0, 0, 2100, 200, 0, 1600, 0, 0, 2300, 50, 50, 50, 2300, 50, 50, 50, 2100, 50, 0, 0],
+            data: [0, 0, 200, 2500, 0.16, 0.44, 1139.67, 100.45, 50, 2300, 50, 50, 50, 2300, 50, 50, 50, 2300, 0, 0],
             type: 'line',
             smooth: true, // 可选，平滑线
             symbol: 'none',
