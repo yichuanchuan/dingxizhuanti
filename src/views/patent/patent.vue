@@ -8,8 +8,7 @@
         <!-- 静态文本 -->
         <customText v-for="(item, index) in textList" :options="item" :key="'customText' + index"></customText>
         <!-- 右侧图片 -->
-        <div class="right_image1"></div>
-        <!-- 右侧文本 -->
+        <div class="right_image2"></div>
         <div class="right_image1"></div>
         <!-- 左侧图片 -->
         <div class="left_image1"></div>
@@ -17,6 +16,7 @@
         <div class="left_image3"></div>
         <div class="left_image4"></div>
         <div class="left_image5"></div>
+        <div class="left_image6"></div>
         <!-- 左侧文本 -->
         <div class="left_text">
           <div>发明专利<span class="color_text">3项</span>、发表<span class="color_text">论文3篇</span></div>
@@ -104,8 +104,9 @@ export default {
           color: '#BCE3FF',
           width: 956,
           left: 2761,
-          top: 344,
+          top: 1136,
           lineHeight: 90,
+          letterSpacing: 4
         },
       ],
     };
@@ -167,10 +168,10 @@ export default {
     justify-content: center;
 
     .right_image1 {
-      width: 955px;
-      height: 476px;
+      width: 928px;
+      height: 453px;
       position: absolute;
-      top: 768px;
+      top: 1536px;
       left: 2761px;
       background: url('./images/img.png');
       transition: transform 0.3s;
@@ -182,12 +183,28 @@ export default {
       }
     }
 
-    .left_image1 {
-      width: 387px;
-      height: 486px;
+    .right_image2 {
+      width: 966px;
+      height: 534px;
       position: absolute;
-      top: 339px;
-      left: 200px;
+      top: 324px;
+      left: 2743px;
+      background: url('./images/right.png');
+      transition: transform 0.3s;
+
+      /* 添加过渡效果 */
+      &:hover {
+        transform: scale(1.06);
+        /* 在悬停时放大 1.06 倍 */
+      }
+    }
+
+    .left_image1 {
+      width: 428px;
+      height: 536px;
+      position: absolute;
+      top: 331px;
+      left: 168px;
       background: url('./images/img1.png');
       transition: transform 0.3s;
 
@@ -199,11 +216,11 @@ export default {
     }
 
     .left_image2 {
-      width: 387px;
-      height: 486px;
+      width: 428px;
+      height: 536px;
       position: absolute;
-      top: 339px;
-      left: 617px;
+      top: 331px;
+      left: 626px;
       background: url('./images/img2.png');
       transition: transform 0.3s;
 
@@ -215,11 +232,11 @@ export default {
     }
 
     .left_image3 {
-      width: 387px;
-      height: 486px;
+      width: 428px;
+      height: 536px;
       position: absolute;
-      top: 855px;
-      left: 200px;
+      top: 897px;
+      left: 168px;
       background: url('./images/img3.png');
       transition: transform 0.3s;
 
@@ -231,11 +248,11 @@ export default {
     }
 
     .left_image4 {
-      width: 387px;
-      height: 486px;
+      width: 428px;
+      height: 536px;
       position: absolute;
-      top: 855px;
-      left: 617px;
+      top: 897px;
+      left: 626px;
       background: url('./images/img4.png');
       transition: transform 0.3s;
 
@@ -247,12 +264,28 @@ export default {
     }
 
     .left_image5 {
-      width: 804px;
-      height: 381px;
+      width: 428px;
+      height: 536px;
       position: absolute;
-      top: 1371px;
-      left: 200px;
+      top: 1463px;
+      left: 168px;
       background: url('./images/img5.png');
+      transition: transform 0.3s;
+
+      /* 添加过渡效果 */
+      &:hover {
+        transform: scale(1.07);
+        /* 在悬停时放大 1.06 倍 */
+      }
+    }
+
+    .left_image6 {
+      width: 428px;
+      height: 536px;
+      position: absolute;
+      top: 1463px;
+      left: 626px;
+      background: url('./images/img6.png');
       transition: transform 0.3s;
 
       /* 添加过渡效果 */
@@ -267,13 +300,13 @@ export default {
       font-weight: 500;
       font-size: 36px;
       color: #bce3ff;
-      line-height: 50px;
+      line-height: 70px;
       position: absolute;
-      top: 1788px;
-      left: 200px;
-      width: 903px;
+      top: 1750px;
+      left: 1289px;
+      width: 1203px;
       text-align: left;
-      letter-spacing: 3px;
+      letter-spacing: 16px;
     }
 
     .color_text {
