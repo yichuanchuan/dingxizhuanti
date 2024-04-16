@@ -57,209 +57,149 @@ export default {
       predictionList: [
         [
           {
-            text: '03-04',
+            text: '04-13',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
             marginBottom: '56px',
           },
           {
-            text: '03-04',
+            text: '04-13',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
             marginBottom: '56px',
           },
           {
-            text: '03-04',
+            text: '04-13',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
             marginBottom: '56px',
           },
           {
-            text: '03-04',
+            text: '04-13',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
             marginBottom: '56px',
           },
           {
-            text: '03-04',
+            text: '04-13',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
             marginBottom: '56px',
           },
           {
-            text: '03-04',
+            text: '04-13',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
             marginBottom: '56px',
           },
           {
-            text: '03-04',
+            text: '04-13',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
             marginBottom: '56px',
-          },
-          {
-            text: '03-05',
-            fontSize: '30px',
-            color: '#7FB7E9',
-            fontWeight: 500,
-            marginBottom: '56px',
-          },
-          {
-            text: '03-05',
-            fontSize: '30px',
-            color: '#7FB7E9',
-            fontWeight: 500,
-            marginBottom: '56px',
-          },
-          {
-            text: '03-05',
-            fontSize: '30px',
-            color: '#7FB7E9',
-            fontWeight: 500,
-            marginBottom: '56px',
-          },
+          }
         ],
         [
           {
-            text: '18:00',
+            text: '10:00',
             fontSize: '30px',
             color: 'rgba(127,183,233,0.85)',
             fontWeight: 500,
             marginBottom: '77px',
           },
           {
-            text: '19:00',
+            text: '11:00',
             fontSize: '30px',
             color: 'rgba(127,183,233,0.85)',
             fontWeight: 500,
             marginBottom: '77px',
           },
           {
-            text: '20:00',
+            text: '12:00',
             fontSize: '30px',
             color: 'rgba(127,183,233,0.85)',
             fontWeight: 500,
             marginBottom: '77px',
           },
           {
-            text: '21:00',
+            text: '13:00',
             fontSize: '30px',
             color: 'rgba(127,183,233,0.85)',
             fontWeight: 500,
             marginBottom: '77px',
           },
           {
-            text: '22:00',
+            text: '14:00',
             fontSize: '30px',
             color: 'rgba(127,183,233,0.85)',
             fontWeight: 500,
             marginBottom: '77px',
           },
           {
-            text: '23:00',
+            text: '15:00',
             fontSize: '30px',
             color: 'rgba(127,183,233,0.85)',
             fontWeight: 500,
             marginBottom: '77px',
           },
           {
-            text: '24:00',
+            text: '16:00',
             fontSize: '30px',
             color: 'rgba(127,183,233,0.85)',
             fontWeight: 500,
             marginBottom: '77px',
-          },
-          {
-            text: '01:00',
-            fontSize: '30px',
-            color: 'rgba(127,183,233,0.85)',
-            fontWeight: 500,
-            marginBottom: '77px',
-          },
-          {
-            text: '02:00',
-            fontSize: '30px',
-            color: 'rgba(127,183,233,0.85)',
-            fontWeight: 500,
-            marginBottom: '77px',
-          },
-          {
-            text: '03:00',
-            fontSize: '30px',
-            color: 'rgba(127,183,233,0.85)',
-            fontWeight: 500,
-            marginBottom: '77px',
-          },
+          }
         ],
         [
           {
-            text: '5°',
+            text: '14°',
             fontSize: '40px',
             color: '#43F2FF',
             fontWeight: 500,
           },
           {
-            text: '3°',
+            text: '16°',
             fontSize: '40px',
             color: '#43F2FF',
             fontWeight: 500,
           },
           {
-            text: '2.1°',
+            text: '16°',
             fontSize: '40px',
             color: '#43F2FF',
             fontWeight: 500,
           },
           {
-            text: '1°',
+            text: '17°',
             fontSize: '40px',
             color: '#43F2FF',
             fontWeight: 500,
           },
           {
-            text: '0°',
+            text: '18°',
             fontSize: '40px',
             color: '#43F2FF',
             fontWeight: 500,
           },
           {
-            text: '-0.5°',
+            text: '19°',
             fontSize: '40px',
             color: '#43F2FF',
             fontWeight: 500,
           },
           {
-            text: '-2.9°',
+            text: '20°',
             fontSize: '40px',
             color: '#43F2FF',
             fontWeight: 500,
-          },
-          {
-            text: '-2.9°',
-            fontSize: '40px',
-            color: '#43F2FF',
-            fontWeight: 500,
-          },
-          {
-            text: '-3.9°',
-            fontSize: '40px',
-            color: '#43F2FF',
-            fontWeight: 500,
-          },
-          {
-            text: '-2.5°',
-            fontSize: '40px',
-            color: '#43F2FF',
-            fontWeight: 500,
-          },
+          }
         ],
       ],
       textList: [
@@ -739,18 +679,18 @@ export default {
         },
         xAxis: {
           data: [
-            '03-04 00:00',
-            '03-04 01:00',
-            '03-04 02:00',
-            '03-04 03:00',
-            '03-04 04:00',
-            '03-04 05:00',
-            '03-04 06:00',
-            '03-04 07:00',
-            '03-04 08:00',
-            '03-04 09:00',
+            '04-13 02:00',
+            '04-13 08:00',
+            '04-13 14:00',
+            '04-13 20:00',
+            '04-14 02:00',
+            '04-14 08:00',
+            '04-14 14:00',
+            '04-14 20:00',
+            '04-15 02:00',
+            '04-15 08:00',
+            '04-15 14:00',
           ],
-          interval: 0,
           offset: 35,
           axisLine: {
             show: false, //隐藏X轴轴线
@@ -759,6 +699,7 @@ export default {
             show: false, //隐藏X轴刻度
           },
           axisLabel: {
+            interval: 1,
             show: true,
             textStyle: {
               color: '#BCE3FF', //X轴文字颜色
@@ -876,7 +817,7 @@ export default {
               opacity: 0.8,
             },
             z: 5,
-            data: [0, 0, 18000, 0, 0, 18000, 0, 0, 17500, 0],
+            data: [0, 0, 18000, 0, 0, 18000, 0, 0, 17500, 0, 0],
           },
         ],
       },
@@ -920,7 +861,7 @@ export default {
           },
         },
         xAxis: {
-          data: ['2024-02-25', '2024-02-26', '2024-02-27', '2024-02-28', '2024-02-29', '2024-03-01', '2024-03-02', '2024-03-03'],
+          data: ['04-08', '04-09', '04-10', '04-11', '04-12', '04-13', '04-14'],
           interval: 0,
           offset: 15,
           axisLine: {
@@ -931,6 +872,7 @@ export default {
           },
           axisLabel: {
             show: true,
+            interval: 1,
             textStyle: {
               color: '#BCE3FF', //X轴文字颜色
               fontSize: '22',
@@ -940,7 +882,7 @@ export default {
         yAxis: [
           {
             type: 'value',
-            name: '单位/kw',
+            name: '单位/%',
             nameLocation: 'end',
             nameTextStyle: {
               color: '#BCE3FF',
@@ -956,10 +898,10 @@ export default {
                 type: 'dashed', // ! 网格虚线设置
               },
             },
-            max: 21000,
+            max: 100,
             min: 0,
             scale: true,
-            splitNumber: 7,
+            splitNumber: 5,
             axisTick: {
               show: false,
             },
@@ -971,6 +913,10 @@ export default {
               textStyle: {
                 color: '#BCE3FF',
                 fontSize: '22',
+              },
+              formatter: function(value) {
+                // 自定义标签格式，例如添加单位
+                return value + '%';
               },
             },
           },
@@ -1048,7 +994,7 @@ export default {
               opacity: 0.8,
             },
             z: 5,
-            data: [10000, 11000, 15000, 14500, 17000, 13500, 4500, 12000],
+            data: [95, 94, 91, 99, 97, 95, 98, 96],
           },
         ],
       },
@@ -1077,7 +1023,7 @@ export default {
             axisLine: {
               lineStyle: {
                 color: [
-                  [0.36, '#FDB302'],
+                  [0.4, '#FDB302'],
                   [1, '#1E1E1E'],
                 ],
                 width: 25,
@@ -1127,7 +1073,7 @@ export default {
                 },
               ],
             },
-            data: [4],
+            data: [10],
           },
         ],
       },
