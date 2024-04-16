@@ -18,6 +18,17 @@
             <div class="prediction_item_text" v-for="(it, idx) in item" :key="idx" :style="it">{{ it.text }}</div>
           </div>
         </div>
+        <!-- 分页 -->
+        <div class="pagination">
+          <el-pagination
+            @size-change="handleSizeChange"
+            @current-change="handleCurrentChange"
+            :current-page="currentPage"
+            :page-size="11" background
+            layout="total,  prev, pager, next, jumper"
+            :total="3075">
+          </el-pagination>
+        </div>
       </div>
     </div>
   </div>
@@ -1107,7 +1118,8 @@ export default {
           },
         ],
       ],
-    };
+      currentPage: 1
+    }
   },
   methods: {
     toRouter(path) {
@@ -1139,6 +1151,12 @@ export default {
       };
       this.onWindowResize();
     },
+    handleSizeChange(val) {
+      console.log(`每页 ${val} 条`);
+    },
+    handleCurrentChange(val) {
+      console.log(`当前页: ${val}`);
+    }
   },
   created() {},
   mounted() {
@@ -1167,7 +1185,7 @@ export default {
       position: absolute;
       width: 1630px;
       height: 1242px;
-      top: 596px;
+      top: 526px;
       left: 2080px;
       background: url('./images/table.png');
       .prediction_item {
@@ -1179,6 +1197,20 @@ export default {
           height: 112px;
           line-height: 33px;
         }
+      }
+    }
+    .pagination {
+      transform: scale(2.2);
+      position: absolute;
+      top: 1858px;
+      left: 2723px;
+      /deep/.el-pagination__total {
+        color: #BCE3FF;
+        font-size: 16px;
+      }
+      /deep/.el-pagination__jump {
+        color: #B8B8B8;
+        font-size: 12.7px;
       }
     }
   }

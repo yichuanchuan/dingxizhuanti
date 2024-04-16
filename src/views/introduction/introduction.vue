@@ -5,11 +5,12 @@
         <!-- 返回 -->
         <img src="assets/images/back.png" alt="" class="back_image" @click="$router.back()" />
         <img src="assets/images/next.png" alt="" class="over_image" @click="$router.push({ path: '/errorAnalysis' })" />
+        <!-- 静态文本 -->
+        <customText v-for="(item, index) in textList" :options="item" :key="'customText' + index"></customText>
         <!-- 左侧文本 -->
-        <div class="left_text">
-          一是选取分布式光伏功率预测影响典型因子，使用灰色关联度和余弦相似度算法进行集成，构建相似时刻模型;二是结合时序理论，采用时序差分、滑动窗口等方式构建时序特征和离散特征，结合站点容量、气象条件等多方要素，使用
-          XGBOOST集成算法完成功率预测模型构建；三是模型预测准确率保障在90%以上，其中通渭县典型区域和站点功率预测准确率达93.29%。
-        </div>
+        <div class="text text1">1.选取功率预测<span class="color_text">影响典型因子</span>，使用灰色关联度和余弦相似度算法进行集成，构建<span class="color_text">相似时刻模型</span>。</div>
+        <div class="text text2">2.结合时序理论，采用时序差分、滑动窗口等方式构建时序特征和离散特征。</div>
+        <div class="text text3">3.结合站点容量、气象条件等多方要素，使用<span class="color_text">XGBOOST集成算法</span>构建功率预测模型构建。</div>
         <!-- 右侧图片 -->
         <div class="right_image1"></div>
         <!-- 右下角echarts -->
@@ -73,6 +74,19 @@ export default {
       changeBig: false,
       width: 3840,
       height: 2160,
+      textList: [
+        {
+          text: '精准构建预测模型',
+          fontSize: 50,
+          fontFamily: 'PingFangSC, PingFang SC',
+          fontWeight: 'normal',
+          textAlign: 'left',
+          color: '#7BB3E6',
+          width: 400,
+          left: 154,
+          top: 360,
+        },
+      ],
       chartCssStyle: {
         width: 1400,
         height: 660,
@@ -984,6 +998,29 @@ export default {
     .prediction3 {
       top: 1858px;
       left: 160px;
+    }
+    .color_text {
+      color: #fcb52b;
+    }
+    .text {
+      font-family: PingFangSC, PingFang SC;
+      font-weight: 400;
+      font-size: 40px;
+      color: #7BB3E6;
+      text-align: left;
+      line-height: 100px;
+      position: absolute;
+      left: 154px;
+      width: 1065px;
+    }
+    .text1 {
+      top: 466px;
+    }
+    .text2 {
+      top: 666px;
+    }
+    .text3 {
+      top: 866px;
     }
   }
 }

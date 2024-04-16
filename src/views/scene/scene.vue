@@ -14,7 +14,7 @@
         <!-- 左侧文本 -->
         <div class="left_text">
           <span class="big_text" style="margin-right: 10px">定西</span
-          >地处黄土高原、青藏高原和西秦岭交汇地带，素有“兰州门户、甘肃咽喉”之称。定西光伏能源相对富集，
+          >光伏能源相对富集，
           <span class="sm_text">10千伏</span>及以下并网光伏容量 <span class="sm_text">208MW</span>，位列全省第一。按照国家能源局和甘肃省发改委
           <span class="sm_text">“3+10+X”</span>整县分布式光伏建设框架，定西最终装机规模将达到
           <span class="sm_text">700MW</span>
@@ -31,7 +31,7 @@
         </div>
         <!-- 中下文本 -->
         <div class="right_text">
-          分布式光伏功率预测系统，秉持架构统一、安全高效、应用智能的建设原则，充分发挥能源大数据中心优势，依托企业级实时量测中心，实现跨专业、跨系统分布式光伏全量数据接入，并融合气象、地理、环境、人口、经济等数据，构建分布式光伏功率预测模型，开展功率精准预测、智能负荷预测和源荷关联分析，搭建具备气象监测、功率预测、误差分析、站点概览4类功能的监测凭条，为地配调运行安排及配电网智能调度提供可靠数据支撑。
+          分布式光伏功率预测平台，充分发挥能源大数据中心优势，实现跨专业、跨系统分布式光伏全量数据接入，构建分布式光伏功率预测模型，开展功率精准预测、智能负荷预测和源荷关联分析，搭建具备站点概览、气象监测、功率预测、误差分析四类功能的监测凭条。
         </div>
         <!-- 中下图片 -->
         <div class="right_img1"></div>
@@ -94,8 +94,9 @@ export default {
           textAlign: 'left',
           color: '#BCE3FF',
           width: 80,
-          left: 1536,
-          top: 673,
+          left: 1283,
+          top: 502,
+          lineHeight: 70
         },
         {
           text: '预测 曲线',
@@ -105,8 +106,9 @@ export default {
           textAlign: 'left',
           color: '#BCE3FF',
           width: 80,
-          left: 1696,
-          top: 802,
+          left: 2112,
+          top: 871,
+          lineHeight: 70
         },
         {
           text: '误差 分析',
@@ -116,8 +118,9 @@ export default {
           textAlign: 'left',
           color: '#BCE3FF',
           width: 80,
-          left: 2078,
-          top: 801,
+          left: 2465,
+          top: 502,
+          lineHeight: 70
         },
         {
           text: '气象 曲线',
@@ -127,52 +130,53 @@ export default {
           textAlign: 'left',
           color: '#BCE3FF',
           width: 80,
-          left: 2238,
-          top: 678,
+          left: 1639,
+          top: 865,
+          lineHeight: 70
         },
         {
           text: '01',
-          fontSize: 50,
+          fontSize: 70,
           fontFamily: 'zaozi',
           fontWeight: 400,
           textAlign: 'left',
           color: '#DDEFFF',
           width: 52,
-          left: 1548,
-          top: 560,
+          left: 1463,
+          top: 545,
         },
         {
           text: '02',
-          fontSize: 50,
+          fontSize: 70,
           fontFamily: 'zaozi',
           fontWeight: 400,
           textAlign: 'left',
           color: '#DDEFFF',
           width: 80,
-          left: 1695,
-          top: 687,
+          left: 1639,
+          top: 700,
         },
         {
           text: '03',
-          fontSize: 50,
+          fontSize: 70,
           fontFamily: 'zaozi',
           fontWeight: 400,
           textAlign: 'left',
           color: '#DDEFFF',
           width: 80,
-          left: 2084,
-          top: 687,
+          left: 2112,
+          top: 700,
         },
         {
           text: '04',
-          fontSize: 50,
+          fontSize: 70,
           fontFamily: 'zaozi',
           fontWeight: 400,
           textAlign: 'left',
           color: '#DDEFFF',
           width: 79,
-          left: 2238,
-          top: 563,
+          left: 2304,
+          top: 545,
         },
       ],
     };
@@ -271,12 +275,12 @@ export default {
     .right_text {
       font-family: PingFangSC, PingFang SC;
       font-weight: 500;
-      font-size: 34px;
+      font-size: 30px;
       color: #7bb3e6;
-      line-height: 48px;
+      line-height: 70px;
       text-align: left;
       position: absolute;
-      top: 1290px;
+      top: 1331px;
       left: 1285px;
       width: 1270px;
     }
@@ -337,7 +341,7 @@ export default {
       width: 1270px;
       height: 420px;
       position: absolute;
-      top: 1614px;
+      top: 1584px;
       left: 1285px;
       background: url('./images/img1.png');
       transition: transform 0.3s; /* 添加过渡效果 */

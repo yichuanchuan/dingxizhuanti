@@ -19,7 +19,7 @@
         <div class="left_image6"></div>
         <!-- 左侧文本 -->
         <div class="left_text">
-          <div>发明专利<span class="color_text">3项</span>、发表<span class="color_text">论文3篇</span></div>
+          <div>专利<span class="color_text">3项</span>、发表<span class="color_text">论文3篇</span></div>
           <div>在新华网、公司门户等发表<span class="color_text">新闻报道3篇</span></div>
           <div>2023年度甘肃省优秀质量管理小组<span class="color_text">二等奖</span></div>
           <div>国网甘肃省电力公司2023年大数据应用优秀成果集</div>
@@ -96,7 +96,7 @@ export default {
           top: 1373,
         },
         {
-          text: '依托能源大数据应用支撑平台，以算法模型、数据应用等形式多渠道共享复用，助力区域分布式光伏稳步发展，建立可持续的清洁能源开发利用模式，助推实现“碳达峰、碳中和”战略目标。',
+          text: '依托能源大数据中心平台，以算法模型、数据应用等形式多渠道共享复用，助力区域分布式光伏稳步发展，建立可持续的清洁能源开发利用模式，助推实现“碳达峰、碳中和”战略目标。',
           fontSize: 36,
           fontFamily: 'PingFangSC, PingFang SC',
           fontWeight: 500,
@@ -104,9 +104,9 @@ export default {
           color: '#BCE3FF',
           width: 956,
           left: 2761,
-          top: 1136,
-          lineHeight: 90,
-          letterSpacing: 4
+          top: 1146,
+          lineHeight: 70,
+          letterSpacing: 8
         },
       ],
     };
@@ -306,7 +306,7 @@ export default {
       left: 1289px;
       width: 1203px;
       text-align: left;
-      letter-spacing: 16px;
+      letter-spacing: 8px;
     }
 
     .color_text {
