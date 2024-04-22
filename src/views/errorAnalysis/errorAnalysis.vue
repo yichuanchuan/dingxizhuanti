@@ -70,7 +70,7 @@ export default {
       height: 2160,
       textList: [
         {
-          text: '针对分站点、电压等级、装机容量的',
+          text: '针对分站点、电压等级、装机容量开展',
           fontSize: 52,
           fontFamily: 'PingFangSC, PingFang SC',
           fontWeight: 400,
@@ -118,7 +118,7 @@ export default {
           lineHeight: 73,
         },
         {
-          text: '以及关联关系,研究适用于定西电网分',
+          text: '以及关联关系，研究适用于定西电网分',
           fontSize: 52,
           fontFamily: 'PingFangSC, PingFang SC',
           fontWeight: 400,

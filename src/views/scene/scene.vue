@@ -17,7 +17,7 @@
           >光伏能源相对富集，
           <span class="sm_text">10千伏</span>及以下并网光伏容量 <span class="sm_text">208MW</span>，位列全省第一。按照国家能源局和甘肃省发改委
           <span class="sm_text">“3+10+X”</span>整县分布式光伏建设框架，定西最终装机规模将达到
-          <span class="sm_text">700MW</span>
+          <span class="sm_text">700MW</span>。
         </div>
         <!-- 中部文本 -->
         <div class="text text1">数据预处理：历史数据<span class="color_text">可信度</span>提升至<span class="color_text">99.87%</span></div>
@@ -25,13 +25,13 @@
         <div class="text text3">数据网格化：降尺度模型获取<span class="color_text">3*3Km</span>网格化气象预报数据</div>
         <div class="text text4">区域建模：构建基于不同时空特征的模型<span class="color_text">9个</span></div>
         <div class="text text5">
-          模型融合：短时<span class="color_text">（0-4h）</span>、超短时<span class="color_text">（0-72h）</span>模型<span class="color_text"
+          模型融合：短时<span class="color_text">（0-4h）</span>模型<span class="color_text"
             >自适应融合修正</span
           >
         </div>
         <!-- 中下文本 -->
         <div class="right_text">
-          分布式光伏功率预测平台，充分发挥能源大数据中心优势，实现跨专业、跨系统分布式光伏全量数据接入，构建分布式光伏功率预测模型，开展功率精准预测、智能负荷预测和源荷关联分析，搭建具备站点概览、气象监测、功率预测、误差分析四类功能的监测凭条。
+          分布式光伏功率预测平台，充分发挥能源大数据中心优势，实现跨专业、跨系统分布式光伏全量数据接入，构建分布式光伏功率预测模型，开展功率精准预测和源荷关联分析，搭建具备站点概览、气象监测、功率预测、误差分析四类功能的监测凭条。
         </div>
         <!-- 中下图片 -->
         <div class="right_img1"></div>

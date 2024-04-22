@@ -10,7 +10,7 @@
         <!-- 左侧文本 -->
         <div class="text text1">1.选取功率预测<span class="color_text">影响典型因子</span>，使用灰色关联度和余弦相似度算法进行集成，构建<span class="color_text">相似时刻模型</span>。</div>
         <div class="text text2">2.结合时序理论，采用时序差分、滑动窗口等方式构建时序特征和离散特征。</div>
-        <div class="text text3">3.结合站点容量、气象条件等多方要素，使用<span class="color_text">XGBOOST集成算法</span>构建功率预测模型构建。</div>
+        <div class="text text3">3.结合站点容量、气象条件等多方要素，使用<span class="color_text">XGBOOST集成算法</span>功率预测模型构建。</div>
         <!-- 右侧图片 -->
         <div class="right_image1"></div>
         <!-- 右下角echarts -->
