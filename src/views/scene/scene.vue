@@ -65,15 +65,37 @@ export default {
       height: 2160,
       textList: [
         {
-          text: '模型搭建',
-          fontSize: 42,
-          fontFamily: 'PingFangSC, PingFang SC',
+          text: '项目背景',
+          fontSize: 36,
+          fontFamily: 'yaoshe',
           fontWeight: 'normal',
           textAlign: 'left',
-          color: '#FCB52B',
-          width: 168,
-          left: 3140,
-          top: 1070,
+          color: '#BCE3FF',
+          width: 150,
+          left: 188,
+          top: 202,
+        },
+        {
+          text: '总体思路',
+          fontSize: 36,
+          fontFamily: 'yaoshe',
+          fontWeight: 'normal',
+          textAlign: 'left',
+          color: '#BCE3FF',
+          width: 150,
+          left: 1312,
+          top: 1283,
+        },
+        {
+          text: '模型搭建',
+          fontSize: 36,
+          fontFamily: 'yaoshe',
+          fontWeight: 'normal',
+          textAlign: 'left',
+          color: '#BCE3FF',
+          width: 150,
+          left: 2792,
+          top: 196,
         },
         {
           text: '四大场景',
@@ -99,7 +121,7 @@ export default {
           lineHeight: 70
         },
         {
-          text: '预测 曲线',
+          text: '功率 预测',
           fontSize: 40,
           fontFamily: 'PingFangSC, PingFang SC',
           fontWeight: 500,
@@ -123,7 +145,7 @@ export default {
           lineHeight: 70
         },
         {
-          text: '气象 曲线',
+          text: '气象 监测',
           fontSize: 40,
           fontFamily: 'PingFangSC, PingFang SC',
           fontWeight: 500,
