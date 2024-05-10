@@ -76,6 +76,17 @@ export default {
       height: 2160,
       textList: [
         {
+          text: '功率预测',
+          fontSize: 36,
+          fontFamily: 'yaoshe',
+          fontWeight: 'normal',
+          textAlign: 'left',
+          color: '#BCE3FF',
+          width: 150,
+          left: 188,
+          top: 202,
+        },
+        {
           text: '精准构建预测模型',
           fontSize: 56,
           fontFamily: 'PingFangSC, PingFang SC',
