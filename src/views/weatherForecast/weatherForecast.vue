@@ -57,49 +57,49 @@ export default {
       predictionList: [
         [
           {
-            text: '04-13',
+            text: '05-12',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
             marginBottom: '56px',
           },
           {
-            text: '04-13',
+            text: '05-12',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
             marginBottom: '56px',
           },
           {
-            text: '04-13',
+            text: '05-12',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
             marginBottom: '56px',
           },
           {
-            text: '04-13',
+            text: '05-12',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
             marginBottom: '56px',
           },
           {
-            text: '04-13',
+            text: '05-12',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
             marginBottom: '56px',
           },
           {
-            text: '04-13',
+            text: '05-12',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
             marginBottom: '56px',
           },
           {
-            text: '04-13',
+            text: '05-12',
             fontSize: '30px',
             color: '#7FB7E9',
             fontWeight: 500,
@@ -107,6 +107,34 @@ export default {
           }
         ],
         [
+          {
+            text: '06:00',
+            fontSize: '30px',
+            color: 'rgba(127,183,233,0.85)',
+            fontWeight: 500,
+            marginBottom: '77px',
+          },
+          {
+            text: '07:00',
+            fontSize: '30px',
+            color: 'rgba(127,183,233,0.85)',
+            fontWeight: 500,
+            marginBottom: '77px',
+          },
+          {
+            text: '08:00',
+            fontSize: '30px',
+            color: 'rgba(127,183,233,0.85)',
+            fontWeight: 500,
+            marginBottom: '77px',
+          },
+          {
+            text: '09:00',
+            fontSize: '30px',
+            color: 'rgba(127,183,233,0.85)',
+            fontWeight: 500,
+            marginBottom: '77px',
+          },
           {
             text: '10:00',
             fontSize: '30px',
@@ -127,37 +155,27 @@ export default {
             color: 'rgba(127,183,233,0.85)',
             fontWeight: 500,
             marginBottom: '77px',
-          },
-          {
-            text: '13:00',
-            fontSize: '30px',
-            color: 'rgba(127,183,233,0.85)',
-            fontWeight: 500,
-            marginBottom: '77px',
-          },
-          {
-            text: '14:00',
-            fontSize: '30px',
-            color: 'rgba(127,183,233,0.85)',
-            fontWeight: 500,
-            marginBottom: '77px',
-          },
-          {
-            text: '15:00',
-            fontSize: '30px',
-            color: 'rgba(127,183,233,0.85)',
-            fontWeight: 500,
-            marginBottom: '77px',
-          },
-          {
-            text: '16:00',
-            fontSize: '30px',
-            color: 'rgba(127,183,233,0.85)',
-            fontWeight: 500,
-            marginBottom: '77px',
           }
         ],
         [
+          {
+            text: '7°',
+            fontSize: '40px',
+            color: '#43F2FF',
+            fontWeight: 500,
+          },
+          {
+            text: '8°',
+            fontSize: '40px',
+            color: '#43F2FF',
+            fontWeight: 500,
+          },
+          {
+            text: '10°',
+            fontSize: '40px',
+            color: '#43F2FF',
+            fontWeight: 500,
+          },
           {
             text: '14°',
             fontSize: '40px',
@@ -165,13 +183,7 @@ export default {
             fontWeight: 500,
           },
           {
-            text: '16°',
-            fontSize: '40px',
-            color: '#43F2FF',
-            fontWeight: 500,
-          },
-          {
-            text: '16°',
+            text: '15°',
             fontSize: '40px',
             color: '#43F2FF',
             fontWeight: 500,
@@ -184,18 +196,6 @@ export default {
           },
           {
             text: '18°',
-            fontSize: '40px',
-            color: '#43F2FF',
-            fontWeight: 500,
-          },
-          {
-            text: '19°',
-            fontSize: '40px',
-            color: '#43F2FF',
-            fontWeight: 500,
-          },
-          {
-            text: '20°',
             fontSize: '40px',
             color: '#43F2FF',
             fontWeight: 500,
@@ -679,17 +679,17 @@ export default {
         },
         xAxis: {
           data: [
-            '04-13 02:00',
-            '04-13 08:00',
-            '04-13 14:00',
-            '04-13 20:00',
-            '04-14 02:00',
-            '04-14 08:00',
-            '04-14 14:00',
-            '04-14 20:00',
-            '04-15 02:00',
-            '04-15 08:00',
-            '04-15 14:00',
+            '05-10 02:00',
+            '05-10 08:00',
+            '05-10 12:00',
+            '05-10 20:00',
+            '05-11 02:00',
+            '05-11 08:00',
+            '05-11 12:00',
+            '05-11 20:00',
+            '05-12 02:00',
+            '05-12 08:00',
+            '05-12 12:00',
           ],
           offset: 35,
           axisLine: {
@@ -861,7 +861,7 @@ export default {
           },
         },
         xAxis: {
-          data: ['04-08', '04-09', '04-10', '04-11', '04-12', '04-13', '04-14'],
+          data: ['05-09', '05-09', '05-10', '05-10', '05-11', '05-11', '05-12'],
           interval: 0,
           offset: 15,
           axisLine: {
@@ -1023,7 +1023,7 @@ export default {
             axisLine: {
               lineStyle: {
                 color: [
-                  [0.4, '#FDB302'],
+                  [0.4335, '#FDB302'],
                   [1, '#1E1E1E'],
                 ],
                 width: 25,
@@ -1073,7 +1073,7 @@ export default {
                 },
               ],
             },
-            data: [10],
+            data: [15],
           },
         ],
       },

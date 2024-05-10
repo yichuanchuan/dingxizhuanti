@@ -9,8 +9,8 @@
         <customText v-for="(item, index) in textList" :options="item" :key="'customText' + index"></customText>
         <!-- 左侧文本 -->
         <div class="text text1">1.选取功率预测<span class="color_text">影响典型因子</span>，使用灰色关联度和余弦相似度算法进行集成，构建<span class="color_text">相似时刻模型</span>。</div>
-        <div class="text text2">2.结合时序理论，采用时序差分、滑动窗口等方式构建时序特征和离散特征。</div>
-        <div class="text text3">3.结合站点容量、气象条件等多方要素，使用<span class="color_text">XGBOOST集成算法</span>功率预测模型构建。</div>
+        <div class="text text2">2.结合站点容量、气象条件等多方要素，使用<span class="color_text">XGBOOST集成算法</span>功率预测模型。</div>
+        <div class="text text3">3.短期预测准确率在92%以上，通渭地区及典型区域短期预测准确率达93.29%。</div>
         <!-- 右侧图片 -->
         <div class="right_image1"></div>
         <!-- 右下角echarts -->
@@ -77,7 +77,7 @@ export default {
       textList: [
         {
           text: '精准构建预测模型',
-          fontSize: 50,
+          fontSize: 56,
           fontFamily: 'PingFangSC, PingFang SC',
           fontWeight: 'normal',
           textAlign: 'left',
@@ -85,6 +85,17 @@ export default {
           width: 400,
           left: 154,
           top: 360,
+        },
+        {
+          text: '日期：2024-05-12',
+          fontSize: 30,
+          fontFamily: 'PingFangSC, PingFang SC',
+          fontWeight: 'normal',
+          textAlign: 'left',
+          color: '#7BB3E6',
+          width: 400,
+          left: 1070,
+          top: 1350,
         },
       ],
       chartCssStyle: {
@@ -133,25 +144,25 @@ export default {
         xAxis: {
           type: 'category',
           data: [
-            '2024-04-10 20:00',
-            '2024-04-11 00:00',
-            '2024-04-11 04:00',
-            '2024-04-11 08:00',
-            '2024-04-11 12:00',
-            '2024-04-11 16:00',
-            '2024-04-11 20:00',
-            '2024-04-12 00:00',
-            '2024-04-12 04:00',
-            '2024-04-12 08:00',
-            '2024-04-12 12:00',
-            '2024-04-12 16:00',
-            '2024-04-12 20:00',
-            '2024-04-13 00:00',
-            '2024-04-13 04:00',
-            '2024-04-13 08:00',
-            '2024-04-13 12:00',
-            '2024-04-13 16:00',
-            '2024-04-13 20:00',
+            '2024-05-08 20:00',
+            '2024-05-09 00:00',
+            '2024-05-09 04:00',
+            '2024-05-09 08:00',
+            '2024-05-09 12:00',
+            '2024-05-09 16:00',
+            '2024-05-09 20:00',
+            '2024-05-10 00:00',
+            '2024-05-10 04:00',
+            '2024-05-10 08:00',
+            '2024-05-10 12:00',
+            '2024-05-10 16:00',
+            '2024-05-10 20:00',
+            '2024-05-11 00:00',
+            '2024-05-11 04:00',
+            '2024-05-11 08:00',
+            '2024-05-11 12:00',
+            '2024-05-11 16:00',
+            '2024-05-11 20:00',
           ],
           axisLine: {
             show: true,
@@ -1005,7 +1016,7 @@ export default {
     .text {
       font-family: PingFangSC, PingFang SC;
       font-weight: 400;
-      font-size: 40px;
+      font-size: 48px;
       color: #7BB3E6;
       text-align: left;
       line-height: 100px;
