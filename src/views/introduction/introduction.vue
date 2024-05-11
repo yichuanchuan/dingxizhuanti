@@ -10,7 +10,7 @@
         <!-- 左侧文本 -->
         <div class="text text1">1.选取功率预测<span class="color_text">影响典型因子</span>，使用灰色关联度和余弦相似度算法进行集成，构建<span class="color_text">相似时刻模型</span>。</div>
         <div class="text text2">2.结合站点容量、气象条件等多方要素，使用<span class="color_text">XGBOOST集成算法</span>功率预测模型。</div>
-        <div class="text text3">3.短期预测准确率在92%以上，通渭地区及典型区域短期预测准确率达93.29%。</div>
+        <div class="text text3">3.短期预测准确率在<span class="color_text">92%</span>以上，通渭地区及典型区域短期预测准确率达<span class="color_text">93.29%</span>。</div>
         <!-- 右侧图片 -->
         <div class="right_image1"></div>
         <!-- 右下角echarts -->
@@ -93,7 +93,7 @@ export default {
           fontWeight: 'normal',
           textAlign: 'left',
           color: '#7BB3E6',
-          width: 400,
+          width: 450,
           left: 154,
           top: 360,
         },
@@ -155,12 +155,6 @@ export default {
         xAxis: {
           type: 'category',
           data: [
-            '2024-05-08 20:00',
-            '2024-05-09 00:00',
-            '2024-05-09 04:00',
-            '2024-05-09 08:00',
-            '2024-05-09 12:00',
-            '2024-05-09 16:00',
             '2024-05-09 20:00',
             '2024-05-10 00:00',
             '2024-05-10 04:00',
@@ -174,6 +168,12 @@ export default {
             '2024-05-11 12:00',
             '2024-05-11 16:00',
             '2024-05-11 20:00',
+            '2024-05-12 00:00',
+            '2024-05-12 04:00',
+            '2024-05-12 08:00',
+            '2024-05-12 12:00',
+            '2024-05-12 16:00',
+            '2024-05-12 20:00',
           ],
           axisLine: {
             show: true,
